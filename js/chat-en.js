@@ -1,6 +1,6 @@
-const { useState, useEffect, useRef } = React;
+﻿const { useState, useEffect, useRef } = React;
 
-const WEBHOOK_URL = "https://apila.app.n8n.cloud/webhook/29c6dd00-5919-4150-9e35-8a16c7c2714e";
+const WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"; // Placeholder for demo
 
 const SUGGESTIONS = [
     "Why are you better than others?",
@@ -134,7 +134,7 @@ function ChatBlock() {
 
 
 
-// НОВИЙ КОД (безпечний):
+// NEW CODE (safe):
 document.addEventListener("DOMContentLoaded", () => {
     const rootElement = document.getElementById('chat-root');
 

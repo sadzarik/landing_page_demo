@@ -1,4 +1,4 @@
-/* =========================================
+﻿/* =========================================
    RANGE 1: Laptop & Tablet Landscape (Max-Width: 1280px)
    ========================================= */
 @media (max-width: 1280px) {
@@ -1062,14 +1062,14 @@
 
     .mobile-sublink.ai-highlight {
         display: block;
-        /* Щоб рамка охоплювала блок */
+        /* So the border encompasses the block */
         width: 100%;
-        /* На всю ширину контейнера */
+        /* Full container width */
         box-sizing: border-box;
         padding: 10px 15px;
-        /* Відступи всередині рамки */
+        /* Padding inside the border */
         margin-top: 0px;
-        /* Відступ від попереднього пункту */
+        /* Margin from previous item */
         text-align: center;
     }
 
@@ -1534,7 +1534,7 @@
     /* Complex Video Grid */
     .s5-complex-grid {
         gap: 20px;
-        /* Збільшений відступ між рядами для стеку */
+        /* Increased spacing між рядами для стеку */
         margin-top: 20px;
     }
 

@@ -1,42 +1,42 @@
-// --- PRELOADER LOGIC ---
+﻿// --- PRELOADER LOGIC ---
 document.addEventListener('DOMContentLoaded', async () => {
     const preloader = document.getElementById('page-preloader');
 
     if (preloader) {
         // 1. Створюємо таймер безпеки: максимум 1 секунда (1000 мс)
-        // Це гарантує, що для Google PageSpeed прелоадер зникне швидко
+        // Ensures preloader disappears quickly for Google PageSpeed
         const timeoutPromise = new Promise(resolve => setTimeout(resolve, 1000));
 
         // 2. Створюємо проміс для Hero-відео
         const heroVideoPromise = new Promise((resolve) => {
-            // Шукаємо ТІЛЬКИ перше відео (Hero section), щоб не чекати футер/інші відео
-            // Якщо у вас є специфічний ID для hero відео, краще використати: document.getElementById('hero-video')
+            // Search ONLY first video (Hero section) to avoid waiting for footer/others
+            // If you have specific ID for hero video, use: document.getElementById('hero-video')
             const heroVideo = document.querySelector('video[autoplay]');
 
-            // Якщо відео немає взагалі - одразу "резолвимо" (закриваємо прелоадер)
+            // If no video - resolve immediately (close preloader)
             if (!heroVideo) {
                 resolve();
                 return;
             }
 
-            // Якщо відео вже має достатньо даних для відтворення (стан HAVE_FUTURE_DATA або вище)
+            // If video has enough data to play (state HAVE_FUTURE_DATA or higher)
             if (heroVideo.readyState >= 3) {
                 resolve();
             } else {
-                // Чекаємо подію 'canplay' або помилки
+                // Wait for 'canplay' event or error
                 heroVideo.addEventListener('canplay', () => resolve(), { once: true });
                 heroVideo.addEventListener('error', () => resolve(), { once: true });
             }
         });
 
         // 3. Використовуємо Promise.race замість Promise.all
-        // Логіка: "Хто перший встигне: або відео завантажиться, або пройде 1 секунда"
+        // Logic: "Whichever comes first: video loads or 1 second passes"
         await Promise.race([heroVideoPromise, timeoutPromise]);
 
         // 4. Приховуємо прелоадер
         preloader.classList.add('hidden');
 
-        // Видаляємо з DOM після завершення CSS анімації (наприклад, 0.5с)
+        // Remove from DOM after CSS animation completes (e.g. 0.5s)
         setTimeout(() => {
             preloader.remove();
         }, 500);
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- НАЛАШТУВАННЯ ---
-    // Вставте сюди скопійований URL з Google Apps Script
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLyTD1H9DdDTCZ5FVAW08odNXIPVeor69BdTGdYEu4xXJ858kvqQ7fB5VB1HHLug7K/exec";
+    // Paste copied Google Apps Script URL here
+    const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE"; // Placeholder for demo
 
     // --- MOBILE MENU ---
     const mobileMenu = document.getElementById('mobile-menu');
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerBurger = document.querySelector('.header-body .burger-btn');
         if (headerBurger) headerBurger.classList.toggle('active');
         const closeBtn = document.querySelector('.close-menu-btn .burger-btn');
-        // Логіка для хрестика всередині меню, якщо він реалізований через той самий клас
+        // Logic for cross inside menu, if implemented via same class
 
         if (mobileMenu.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // 3. Відправляємо на Google Script
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                // Використовуємо no-cors, бо Google Script іноді блокує стандартні CORS відповіді,
-                // але дані все одно записуються.
+                // Use no-cors as Google Script sometimes blocks standard CORS responses,
+                // but data is still recorded.
                 mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json'
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(formData)
             })
                 .then(() => {
-                    // Успіх
+                    // Success
                     console.log('Дані відправлено');
                     formContent.style.display = 'none';
                     successMessage.style.display = 'flex';
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("Сталася помилка при відправці. Спробуйте пізніше.");
                 })
                 .finally(() => {
-                    // Повертаємо кнопку (хоча форма вже сховається)
+                    // Return button (though form will hide)
                     submitBtn.innerHTML = originalBtnText;
                 });
         });
@@ -174,13 +174,13 @@ function toggleMenu() {
     const menu = document.getElementById('mobile-menu');
     const body = document.body;
 
-    // Перемикаємо клас active для меню
+    // Toggle active class for menu
     menu.classList.toggle('active');
 
-    // Перемикаємо клас menu-open для body (щоб анімувати бургер)
+    // Toggle menu-open class for body (to animate burger)
     body.classList.toggle('menu-open');
 
-    // Блокуємо скрол коли меню відкрите
+    // Block scroll when menu is open
     if (menu.classList.contains('active')) {
         body.style.overflow = 'hidden';
     } else {
@@ -192,15 +192,15 @@ function toggleMobileServices() {
     const list = document.getElementById('mobile-services-list');
     const arrow = document.querySelector('.services-toggle .arrow-icon');
 
-    // Перевірка, чи елементи існують, щоб не було помилок в консолі
+    // Check if elements exist to avoid console errors
     if (!list || !arrow) return;
 
     if (list.style.maxHeight) {
-        // Якщо відкрито - закриваємо
+        // If open - close
         list.style.maxHeight = null;
         arrow.style.transform = 'rotate(0deg)';
     } else {
-        // Якщо закрито - відкриваємо на повну висоту контенту
+        // If closed - open to full content height
         const height = list.scrollHeight;
         list.style.maxHeight = height + "px";
         arrow.style.transform = 'rotate(180deg)';
@@ -212,21 +212,21 @@ function toggleAcc(header) {
     const body = item.querySelector('.s5-acc-body');
     const isActive = item.classList.contains('active');
 
-    // Логіка тільки для поточної картки (інші не чіпаємо)
+    // Logic only for current card (others untouched)
     if (isActive) {
-        // Якщо відкрита -> закриваємо
+        // If open -> close
         item.classList.remove('active');
         body.style.maxHeight = null;
     } else {
-        // Якщо закрита -> відкриваємо
+        // If closed -> open
         const height = body.scrollHeight;
         item.classList.add('active');
         body.style.maxHeight = height + "px";
 
-        // Плавний підворот екрану до початку відкритої картки
-        // (Щоб заголовок був зручно перед очима)
+        // Smooth scroll to start of open card
+        // (So header is comfortably visible)
         setTimeout(() => {
-            const headerOffset = 100; // Відступ для хедера
+            const headerOffset = 100; // Header offset
             const elementPosition = item.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerOffset;
 
@@ -234,7 +234,7 @@ function toggleAcc(header) {
                 top: offsetPosition,
                 behavior: "smooth"
             });
-        }, 300); // Чекаємо поки картка почне відкриватись
+        }, 300); // Wait for card to start opening
     }
 }
 
@@ -242,24 +242,24 @@ function toggleVideo(container) {
     const video = container.querySelector('video');
     const btn = container.querySelector('.s5-play-btn');
 
-    if (!video) return; // Проверка на всяк випадок
+    if (!video) return; // Check just in case
 
     if (video.paused) {
-        // Ставимо на паузу всі інші відео, щоб не було каші звуків
+        // Pause all other videos to avoid sound clash
         document.querySelectorAll('video').forEach(v => {
             if (v !== video) {
                 v.pause();
-                // Показуємо кнопку на інших відео
+                // Show button on other videos
                 const otherBtn = v.parentElement.querySelector('.s5-play-btn');
                 if (otherBtn) otherBtn.style.opacity = '1';
             }
         });
 
         video.play();
-        btn.style.opacity = '0'; // Ховаємо кнопку
+        btn.style.opacity = '0'; // Hide button
     } else {
         video.pause();
-        btn.style.opacity = '1'; // Показуємо кнопку
+        btn.style.opacity = '1'; // Show button
     }
 }
 // // --- HERO VIDEO SPEED CONTROL ---
@@ -267,7 +267,7 @@ function toggleVideo(container) {
 //     const video = document.getElementById('hero-video');
 
 //     if (video) {
-//         // Встановлюємо швидкість відтворення:
+//         // Set playback speed:
 //         // 1.0 = нормальна швидкість
 //         // 0.5 = половина швидкості
 //         video.playbackRate = 1; 
@@ -279,14 +279,14 @@ const cookieBanner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
 const declineBtn = document.getElementById('decline-cookies');
 
-// Перевіряємо, чи був вибір раніше
+// Check if choice was made before
 if (!localStorage.getItem('cookiesChoice')) {
-    // Якщо ні - показуємо банер через 2 секунди
+    // If not - show banner after 2 seconds
     setTimeout(() => {
         cookieBanner.classList.add('show');
     }, 2000);
 } else {
-    // Якщо вибір був "accepted", тут можна запускати аналітику
+    // If choice was "accepted", we can start analytics here
     if (localStorage.getItem('cookiesChoice') === 'accepted') {
         initAnalytics();
     }
@@ -296,7 +296,7 @@ if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesChoice', 'accepted');
         cookieBanner.classList.remove('show');
-        initAnalytics(); // Запускаємо аналітику
+        initAnalytics(); // Start analytics
     });
 }
 
@@ -304,15 +304,15 @@ if (declineBtn) {
     declineBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesChoice', 'declined');
         cookieBanner.classList.remove('show');
-        // Нічого не запускаємо
+        // Do not start anything
     });
 }
 
-// Функція для запуску Google Analytics / Pixel
+// Function to start Google Analytics / Pixel
 function initAnalytics() {
     console.log('Cookies Accepted: Analytics Started');
-    // Сюди ви вставите код Google Analytics (GTM), коли він у вас буде.
-    // Наприклад:
+    // Insert Google Analytics (GTM) code here when you have it.
+    // Example:
     // window.dataLayer = window.dataLayer || [];
     // function gtag(){dataLayer.push(arguments);}
     // gtag('js', new Date());

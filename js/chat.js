@@ -1,6 +1,6 @@
-const { useState, useEffect, useRef } = React;
+﻿const { useState, useEffect, useRef } = React;
 
-// Ваш реальний вебхук
+// Your real webhook
 const WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"; // Placeholder for demo
 
 const SUGGESTIONS = [
@@ -17,7 +17,7 @@ function ChatBlock() {
 
     const chatContainerRef = useRef(null);
 
-    // Автоскрол до низу при нових повідомленнях
+    // Auto-scroll to bottom on new messages
     useEffect(() => {
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
@@ -143,7 +143,7 @@ function ChatBlock() {
 
 
 
-// НОВИЙ КОД (безпечний):
+// NEW CODE (safe):
 document.addEventListener("DOMContentLoaded", () => {
     const rootElement = document.getElementById('chat-root');
 
@@ -154,3 +154,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Помилка: Контейнер #chat-root не знайдено в HTML.");
     }
 });
+

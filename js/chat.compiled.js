@@ -1,11 +1,11 @@
-const {
+﻿const {
   useState,
   useEffect,
   useRef
 } = React;
 
-// Ваш реальний вебхук
-const WEBHOOK_URL = "https://apila.app.n8n.cloud/webhook/29c6dd00-5919-4150-9e35-8a16c7c2714e";
+// Your real webhook
+const WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"; // Placeholder for demo
 const SUGGESTIONS = ["Чим ви кращі за інших?", "Для чого потрібні автоматизації?", "Чи я можу обрати лише одну послугу?"];
 function ChatBlock() {
   const [messages, setMessages] = useState([]);
@@ -14,7 +14,7 @@ function ChatBlock() {
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef(null);
 
-  // Автоскрол до низу при нових повідомленнях
+  // Auto-scroll to bottom on new messages
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
@@ -108,58 +108,58 @@ function ChatBlock() {
     className: "chat-history",
     ref: chatContainerRef
   }, messages.map(msg =>
-  /*#__PURE__*/
-  // !!! ВИПРАВЛЕНО ТУТ: бектіки для шаблонного рядка
-  React.createElement("div", {
-    key: msg.id,
-    className: `message ${msg.sender === 'user' ? 'message-user' : 'message-ai'}`
-  }, msg.text)), isTyping && /*#__PURE__*/React.createElement("div", {
-    className: "message message-ai"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "typing-indicator"
-  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)))), /*#__PURE__*/React.createElement("div", {
-    className: "chat-input-container"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "chat-input-wrapper"
-  }, /*#__PURE__*/React.createElement("input", {
-    type: "text",
-    className: "chat-input",
-    placeholder: "\u0421\u043F\u0438\u0442\u0430\u0439\u0442\u0435 \u043C\u0435\u043D\u0435 \u0449\u043E\u0441\u044C...",
-    value: inputValue,
-    onChange: e => setInputValue(e.target.value),
-    onKeyDown: handleKeyDown,
-    disabled: isTyping
-  }), /*#__PURE__*/React.createElement("button", {
-    className: "send-btn",
-    onClick: () => !isTyping && handleSendMessage(inputValue),
-    style: {
-      opacity: isTyping ? 0.5 : 1
-    }
-  }, /*#__PURE__*/React.createElement("svg", {
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }, /*#__PURE__*/React.createElement("line", {
-    x1: "5",
-    y1: "12",
-    x2: "19",
-    y2: "12"
-  }), /*#__PURE__*/React.createElement("polyline", {
-    points: "12 5 19 12 12 19"
-  })))), /*#__PURE__*/React.createElement("p", {
-    className: "legal-disclaimer"
-  }, "\u0426\u0435\u0439 \u0447\u0430\u0442 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454 \u0448\u0442\u0443\u0447\u043D\u0438\u0439 \u0456\u043D\u0442\u0435\u043B\u0435\u043A\u0442. \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0456 \u043C\u043E\u0436\u0443\u0442\u044C \u0431\u0443\u0442\u0438 \u043D\u0435\u0442\u043E\u0447\u043D\u0438\u043C\u0438. \u041C\u0438 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u043C\u043E \u0456\u0441\u0442\u043E\u0440\u0456\u044E \u0434\u0456\u0430\u043B\u043E\u0433\u0456\u0432.")), showSuggestions && /*#__PURE__*/React.createElement("div", {
-    className: "suggestions-list"
-  }, SUGGESTIONS.map((text, index) => /*#__PURE__*/React.createElement("div", {
-    key: index,
-    className: "suggestion-item",
-    onClick: () => handleSendMessage(text)
-  }, text)))));
+    /*#__PURE__*/
+    // !!! ВИПРАВЛЕНО ТУТ: бектіки для шаблонного рядка
+    React.createElement("div", {
+      key: msg.id,
+      className: `message ${msg.sender === 'user' ? 'message-user' : 'message-ai'}`
+    }, msg.text)), isTyping && /*#__PURE__*/React.createElement("div", {
+      className: "message message-ai"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "typing-indicator"
+    }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)))), /*#__PURE__*/React.createElement("div", {
+      className: "chat-input-container"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "chat-input-wrapper"
+    }, /*#__PURE__*/React.createElement("input", {
+      type: "text",
+      className: "chat-input",
+      placeholder: "\u0421\u043F\u0438\u0442\u0430\u0439\u0442\u0435 \u043C\u0435\u043D\u0435 \u0449\u043E\u0441\u044C...",
+      value: inputValue,
+      onChange: e => setInputValue(e.target.value),
+      onKeyDown: handleKeyDown,
+      disabled: isTyping
+    }), /*#__PURE__*/React.createElement("button", {
+      className: "send-btn",
+      onClick: () => !isTyping && handleSendMessage(inputValue),
+      style: {
+        opacity: isTyping ? 0.5 : 1
+      }
+    }, /*#__PURE__*/React.createElement("svg", {
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }, /*#__PURE__*/React.createElement("line", {
+      x1: "5",
+      y1: "12",
+      x2: "19",
+      y2: "12"
+    }), /*#__PURE__*/React.createElement("polyline", {
+      points: "12 5 19 12 12 19"
+    })))), /*#__PURE__*/React.createElement("p", {
+      className: "legal-disclaimer"
+    }, "\u0426\u0435\u0439 \u0447\u0430\u0442 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454 \u0448\u0442\u0443\u0447\u043D\u0438\u0439 \u0456\u043D\u0442\u0435\u043B\u0435\u043A\u0442. \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0456 \u043C\u043E\u0436\u0443\u0442\u044C \u0431\u0443\u0442\u0438 \u043D\u0435\u0442\u043E\u0447\u043D\u0438\u043C\u0438. \u041C\u0438 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u043C\u043E \u0456\u0441\u0442\u043E\u0440\u0456\u044E \u0434\u0456\u0430\u043B\u043E\u0433\u0456\u0432.")), showSuggestions && /*#__PURE__*/React.createElement("div", {
+      className: "suggestions-list"
+    }, SUGGESTIONS.map((text, index) => /*#__PURE__*/React.createElement("div", {
+      key: index,
+      className: "suggestion-item",
+      onClick: () => handleSendMessage(text)
+    }, text)))));
 }
 
-// НОВИЙ КОД (безпечний):
+// NEW CODE (safe):
 document.addEventListener("DOMContentLoaded", () => {
   const rootElement = document.getElementById('chat-root');
   if (rootElement) {
@@ -169,3 +169,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Помилка: Контейнер #chat-root не знайдено в HTML.");
   }
 });
+

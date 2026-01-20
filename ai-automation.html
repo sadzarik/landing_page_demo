@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. PERSONALIZED META -->
+    <title>AI & Автоматизація — Послуги APILA | Чат-боти, CRM, AI-агенти</title>
+    <meta name="description"
+        content="Впровадження AI-агентів, розумних чат-ботів та автоматизація CRM. Економте час та збільшуйте продажі без розширення штату.">
+
+    
+
+    
+
+    <!-- Open Graph -->
+    
+    
+    
+    <meta property="og:description"
+        content="Впровадження AI-агентів, чат-ботів та автоматизація CRM. Економте час та збільшуйте продажі.">
+    
+    
+    
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <!-- CSS (Absolute paths relative to root) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="index.html" class="header-logo"> <img src="assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobile-menu">
+                <div class="mobile-nav-links">
+                    <a href="index.html" class="mobile-nav-link" onclick="toggleMenu()">ГОЛОВНА</a>
+                    <a href="about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ПРО НАС</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            ПОСЛУГИ <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <!-- ОНОВЛЕНІ ПОСИЛАННЯ -->
+                            <a href="strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="ugc-virality.html" class="mobile-sublink">UGC & Віральність</a>
+                            <a href="ai-automation.html" class="mobile-sublink ai-highlight">AI & Автоматизація</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/ai-automation.html" class="lang-option">EN</a> <!-- Оновлено на папку /en/ -->
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">ЗАЛИШИТИ ЗАЯВКУ</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="index.html" class="nav-link">ГОЛОВНА</a>
+                <a href="about-us.html" class="nav-link">ПРО НАС</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        ПОСЛУГИ
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <!-- ОНОВЛЕНІ ПОСИЛАННЯ (DESKTOP) -->
+                        <a href="strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ugc-virality.html" class="dropdown-link">UGC & Віральність <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ai-automation.html" class="dropdown-link ai-highlight">
+                            AI & Автоматизація
+                            <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/ai-automation.html" class="lang-option">EN</a> <!-- Оновлено -->
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">ЗАЛИШИТИ ЗАЯВКУ</a>
+        </div>
+    </header>
+
+    <div class="service-page-wrapper">
+        <div class="s5-bg-animated"></div>
+
+
+        <main>
+            <div class="s5-mega-card">
+
+                <!-- 1. HERO -->
+                <div class="s5-hero">
+                    <div class="s5-badge">05</div>
+                    <div class="s5-hero-content">
+                        <div class="s5-breadcrumbs">Послуги / AI & Automation</div>
+                        <h1 class="s5-title">AI Solutions<br>& <strong>Автоматизація</strong></h1>
+                        <p class="s5-description">
+                            Впровадження <strong>AI-агентів</strong>, розумних <strong>чат-ботів</strong> та CRM
+                            інтеграцій.
+                            Ваш бізнес спить, а наші алгоритми працюють.
+                            Від генерації лідів до автоматичних продажів у CRM. Ми впроваджуємо "цифрових працівників",
+                            які не хворіють, не втомлюються і продають 24/7.
+                        </p>
+                    </div>
+                    <div class="s5-image-box">
+                        <img src="assets/img/card_5.png" alt="AI Brain"> <!-- Absolute path -->
+                    </div>
+                </div>
+
+                <!-- 2. PROBLEM STRIPE -->
+                <div class="s5-problem-stripe">
+                    <div class="s5-stripe-label">Проблема</div>
+                    <div class="s5-stripe-text">
+                        Ваші менеджери витрачають 80% часу на рутину, а не на продажі? Ліди "холонуть", поки чекають на
+                        дзвінок? Ви втрачаєте гроші через людський фактор.
+                    </div>
+                </div>
+
+                <!-- 3. SERVICES ACCORDION -->
+                <div class="s5-accordion-container" id="accordion">
+
+                    <!-- ITEM 1: AI Video -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">01</div>
+                                <div class="s5-acc-title">AI Commercial Video</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content video-layout">
+
+                                <div class="s5-content-text" style="width: 100%;">
+                                    <p class="s5-description">Короткі комерційні відео побудовані штучним інтелектом для
+                                        бізнесів та брендів. Можливості використання: від постів в соцмережах до запуску
+                                        рекламних кампаній.<br><br>Відео бувають від 5-ти секунд і до хвилини. Ми пишемо
+                                        сценарій та розкадровку, а штучний інтелект займається візуалами. Це швидше і
+                                        дешевше, ніж класичний продакшн, але не менш ефективно.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Scriptwriting</span>
+                                        <span class="s5-tag">AI Visuals</span>
+                                        <span class="s5-tag">Ads Ready</span>
+                                    </div>
+                                </div>
+
+                                <div class="s5-video-cta">
+                                    Подивіться, що ми вже створили 👇
+                                </div>
+
+                                <div class="s5-complex-grid">
+                                    <!-- ROW 1: 16:9 + 9:16 -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-16-9" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/BYD_Leopard_3.mp4" playsinline loop
+                                                poster="/assets/img/byd_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-9-16" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/Bagllet_Concrete.mp4" playsinline loop
+                                                poster="/assets/img/bagllet_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ROW 2: Square -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-square" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/Meama_Coffee.mp4" playsinline loop
+                                                poster="/assets/img/meama_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-square" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/Logitech.mp4" playsinline loop
+                                                poster="/assets/img/logitech_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ROW 3: 9:16 + 16:9 -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-9-16" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/Haribo_Berries.mp4" playsinline loop
+                                                poster="/assets/img/haribo_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-16-9" onclick="toggleVideo(this)">
+                                            <video src="assets/videos/Miami_Rouge.mp4" playsinline loop
+                                                poster="/assets/img/poetry_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2: Lead Generation -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">02</div>
+                                <div class="s5-acc-title">Lead Generation (B2B)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Автоматична генерація лідів. Повний цикл: від створення
+                                        категорій до валідації пошт. На виході 500-1000 потенційних лідів за
+                                        запуск.<br><br><strong>Classic:</strong> 10-14
+                                        годин/цикл.<br><strong>Fast:</strong> 2-4 години/цикл (дозволяє опрацювати в 5
+                                        разів більше клієнтів).<br><br>Тарифи також включають персоналізовані холодні
+                                        Emails з використанням вашої документації.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">500-1000 Leads</span>
+                                        <span class="s5-tag">Parsing</span>
+                                        <span class="s5-tag">Validation</span>
+                                        <span class="s5-tag">Cold Emailing</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_2.png" alt="Lead Gen"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3: AI Cold Calling -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">03</div>
+                                <div class="s5-acc-title">AI Cold Calling</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Ваш персональний агент для холодних дзвінків. Завантажте
+                                        базу номерів, і AI почне телефонувати, пропонуючи знижки, нові продукти або
+                                        special offers.<br><br>Агент посилається лише на реальну інформацію з вашої
+                                        документації. Всі дзвінки записуються в таблицю для контролю.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Outbound</span>
+                                        <span class="s5-tag">Real-time Voice</span>
+                                        <span class="s5-tag">Script adherence</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_3.png" alt="Cold Calling"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4: AI Incoming Calling -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">04</div>
+                                <div class="s5-acc-title">AI Calling (Incoming)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Агент для прийому вхідних дзвінків. Працює як Support 1-ї
+                                        лінії або для перевірки статусу замовлення. Ніколи не спить і не змушує клієнта
+                                        "висіти на лінії".<br><br>Опирається на вашу базу знань. Вся історія
+                                        зберігається.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Inbound</span>
+                                        <span class="s5-tag">24/7 Support</span>
+                                        <span class="s5-tag">Order Status</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_4.png" alt="Support AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5: Emails Allocation -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">05</div>
+                                <div class="s5-acc-title">Emails Allocation & Response</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Автоматичний розбір пошти. AI аналізує вхідні, пише
+                                        персоналізовані відповіді, використовуючи історію листування та статус
+                                        замовлень.<br><br>Важливі листи автоматично пересилаються відповідальному
+                                        менеджеру з повідомленням у Telegram.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Inbox Zero</span>
+                                        <span class="s5-tag">Priority Sorting</span>
+                                        <span class="s5-tag">Auto-Reply</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_5.png" alt="Email AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6: Telegram Posts -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">06</div>
+                                <div class="s5-acc-title">Telegram Posts Automation</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Автоматичне ведення каналів. Створення новинних стрічок за
+                                        графіком або по тригеру (поява новини в мережі).<br><br>AI парсить джерела
+                                        (наприклад, крипто-форуми або сайти новин), рерайтить текст, генерує або шукає
+                                        картинку і публікує.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">News Parsing</span>
+                                        <span class="s5-tag">Auto-Posting</span>
+                                        <span class="s5-tag">Image Generation</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_6.png" alt="Telegram AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 7: LinkedIn Posts -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">07</div>
+                                <div class="s5-acc-title">LinkedIn Posts Automation</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Професійний постинг для вашого бренду. AI аналізує вашу
+                                        документацію і створює експертний контент, що зберігає вашу
+                                        айдентику.<br><br>Можливість генерації фото або використання ваших асетів.
+                                        Постинг чітко за графіком.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">B2B Content</span>
+                                        <span class="s5-tag">Brand Identity</span>
+                                        <span class="s5-tag">Scheduling</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_7.png" alt="LinkedIn AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 8: Autoresponse in CRM -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">08</div>
+                                <div class="s5-acc-title">Autoresponse in CRM</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">"Живе" спілкування в CRM без участі людей. ШІ знає ваші
+                                        скрипти, товари та статуси замовлень.<br><br>Він веде клієнта по воронці до
+                                        продажу, відповідаючи за 1 хвилину. Жодних сухих шаблонів — повна
+                                        персоналізація.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">CRM Integration</span>
+                                        <span class="s5-tag">Sales Funnel</span>
+                                        <span class="s5-tag">Instant Reply</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_8.png" alt="CRM AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 9: ChatBot on Website -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">09</div>
+                                <div class="s5-acc-title">Smart Website ChatBot</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Інтеграція розумного ШІ прямо на ваш сайт. Це не просто
+                                        FAQ, це повноцінний консультант, навчений на вашій документації.<br><br>Дає
+                                        чіткі відповіді, не вигадує (no hallucinations), закриває питання клієнта "тут і
+                                        зараз".</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">RAG System</span>
+                                        <span class="s5-tag">Custom Knowledge Base</span>
+                                        <span class="s5-tag">24/7</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_9.png" alt="ChatBot"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 10: Sales Arena -->
+                    <div class="s5-acc-item"
+                        style="border-color: #9F7AEA; box-shadow: 0 0 20px rgba(159, 122, 234, 0.2);">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num" style="background: #9F7AEA; color: white;">10</div>
+                                <div class="s5-acc-title" style="color: #6B46C1;">Sales Arena (Training)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Тренажерний зал для відділу продажів. ШІ щодня створює
+                                        унікального "покупця" (з характером, запереченнями та настроєм) і починає
+                                        листування з вашим менеджером.<br><br>Менеджер має "продати" товар ШІ. Система
+                                        оцінює навички, дає фідбек і відправляє звіт керівнику. Постійне підвищення
+                                        кваліфікації без участі коучів.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Roleplay AI</span>
+                                        <span class="s5-tag">Staff Training</span>
+                                        <span class="s5-tag">Performance Review</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="assets/img/ai_card_10.png" alt="Sales Training"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 6. CTA BOTTOM -->
+                <div class="s5-cta-section">
+                    <a href="#" class="s5-cta-btn open-contact-modal">
+                        Автоматизувати Бізнес
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer">
+            <div class="footer-content-row">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title">Послуги</div>
+                    <a href="strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                    <a href="design-redesign.html" class="footer-link">Design & ReDesign</a>
+                    <a href="performance-marketing.html" class="footer-link">Performance Marketing</a>
+                    <a href="ugc-virality.html" class="footer-link">UGC & Віральність</a>
+                    <a href="ai-automation.html" class="footer-link">AI & Автоматизація</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title">Follow Us</div>
+                    <a href="#" class="social-link" target="_blank"><img src="assets/icons/instagram.svg" class="social-icon-img"> Instagram</a>
+                    <a href="#" class="social-link" target="_blank"><img src="assets/icons/linkedin.svg" class="social-icon-img"> LinkedIn</a>
+                </div>
+                
+                    
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text">© 2026 APILA. Всі права захищені.</span>
+                <a href="privacy-policy.html" class="policy-link">Політика Конфіденційності</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Обговоримо ваш проект?</h2>
+                    <p class="modal-subtitle">Жодних менеджерів з продажу, які читають по скрипту. Лише конкретна
+                        розмова про ваші цілі та те, як ми можемо їх досягти.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">Ім'я</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Ваше ім'я"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Прізвище</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Ваше прізвище" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Ваш номер або
+                            месенджер</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Повідомлення</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я погоджуюся з обробкою персональних даних та <a
+                                    href="privacy-policy.html" class="policy-link-modal">Політикою
+                                    конфіденційності</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Отримати
+                        консультацію</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Прийнято! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Наша команда вже отримала сигнал.
+                    Ми зв’яжемося з вами найближчим часом.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Чудово</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>Ми використовуємо cookies 🍪 для покращення вашого досвіду та аналізу трафіку.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Прийняти</button>
+            <button id="decline-cookies" class="cookie-btn decline">Відхилити</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
+
+
+
+

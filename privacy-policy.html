@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Політика Конфіденційності | APILA Agency</title>
+    <meta name="description"
+        content="Політика конфіденційності маркетингової агенції APILA. Дізнайтеся, як ми збираємо, використовуємо та захищаємо ваші персональні дані.">
+
+
+
+
+
+    <!-- Open Graph -->
+
+
+
+    <meta property="og:description"
+        content="Політика конфіденційності маркетингової агенції APILA. Захист персональних даних.">
+
+
+
+
+
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS (Absolute paths) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="index.html" class="header-logo"> <img src="assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobile-menu">
+                <div class="mobile-nav-links">
+                    <a href="index.html" class="mobile-nav-link" onclick="toggleMenu()">ГОЛОВНА</a>
+                    <a href="about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ПРО НАС</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            ПОСЛУГИ <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <!-- ОНОВЛЕНІ ПОСИЛАННЯ -->
+                            <a href="strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="ugc-virality.html" class="mobile-sublink">UGC & Віральність</a>
+                            <a href="ai-automation.html" class="mobile-sublink ai-highlight">AI & Автоматизація</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/privacy-policy.html" class="lang-option">EN</a> <!-- Оновлено на папку /en/ -->
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">ЗАЛИШИТИ ЗАЯВКУ</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="index.html" class="nav-link">ГОЛОВНА</a>
+                <a href="about-us.html" class="nav-link">ПРО НАС</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        ПОСЛУГИ
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <!-- ОНОВЛЕНІ ПОСИЛАННЯ (DESKTOP) -->
+                        <a href="strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ugc-virality.html" class="dropdown-link">UGC & Віральність <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ai-automation.html" class="dropdown-link ai-highlight">
+                            AI & Автоматизація
+                            <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/privacy-policy.html" class="lang-option">EN</a> <!-- Оновлено -->
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">ЗАЛИШИТИ ЗАЯВКУ</a>
+        </div>
+    </header>
+
+    <div class="privacy-page-wrapper">
+
+        <!-- HEADER -->
+        <main>
+            <div class="privacy-header">
+                <h1 class="privacy-title">Політика конфіденційності</h1>
+                <p class="privacy-date">Останнє оновлення: 01.12.2025</p>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="privacy-container">
+
+                <div class="privacy-block">
+                    <p class="privacy-text">
+                        Ця Політика конфіденційності (далі — «Політика») регулює порядок збору, використання, зберігання
+                        та захисту персональних даних користувачів вебсайту apila.space (далі — «Сайт»).
+                    </p>
+                    <p class="privacy-text">
+                        Власником Сайту та контролером персональних даних є ФОП Чіркінян Юрій Артемович (далі — «Ми»,
+                        «Агенція» або «Адміністрація»). Ми з повагою ставимося до вашої приватності та діємо відповідно
+                        до Закону України «Про захист персональних даних» та загальноприйнятих європейських стандартів
+                        захисту інформації.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">1. Які дані ми збираємо</h2>
+                    <p class="privacy-text">Ми збираємо інформацію, яка необхідна нам для надання послуг, комунікації та
+                        покращення роботи нашого Сайту.</p>
+
+                    <h3 class="privacy-h3">1.1. Персональні дані, які ви надаєте свідомо</h3>
+                    <p class="privacy-text">Під час заповнення форм, спілкування з менеджерами або використання AI-чату
+                        ми можемо отримувати:</p>
+                    <ul class="privacy-list">
+                        <li>Ім'я та Прізвище;</li>
+                        <li>Номер телефону;</li>
+                        <li>Адресу електронної пошти (E-mail);</li>
+                        <li>Ім'я користувача (Username) в месенджерах (Telegram, WhatsApp тощо);</li>
+                        <li>Зміст ваших повідомлень, запитів та коментарів.</li>
+                    </ul>
+
+                    <h3 class="privacy-h3">1.2. Технічні дані (автоматичний збір)</h3>
+                    <p class="privacy-text">Коли ви відвідуєте Сайт, ми можемо автоматично збирати технічну інформацію:
+                    </p>
+                    <ul class="privacy-list">
+                        <li>IP-адреса та тип пристрою;</li>
+                        <li>Тип браузера та операційної системи;</li>
+                        <li>Дані про вашу взаємодію із Сайтом (переглянуті сторінки, час перебування) через файли cookie
+                            та аналітичні сервіси.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">2. Використання AI-асистента та Webhook</h2>
+                    <p class="privacy-text">На нашому Сайті інтегровано функцію розумного чат-бота для миттєвих
+                        відповідей на запитання. Ця функція використовує Webhook для обміну даними та API моделі Google
+                        Gemini.</p>
+
+                    <p class="privacy-text"><strong>Важлива інформація про обробку даних в чаті:</strong></p>
+                    <ul class="privacy-list">
+                        <li><strong>Передача даних:</strong> Текст вашого запитання передається через захищене з'єднання
+                            до серверів Google LLC для генерації відповіді. Google обробляє дані відповідно до своєї
+                            політики конфіденційності.</li>
+                        <li><strong>Зберігання історії:</strong> Ми зберігаємо історію ваших діалогів з AI у власній
+                            базі даних.</li>
+                        <li><strong>Мета:</strong> Ми аналізуємо запити для покращення точності нашої бази знань
+                            (системи RAG) та якості обслуговування клієнтів.</li>
+                        <li><strong>Відмова від відповідальності:</strong> Відповіді генеруються автоматично штучним
+                            інтелектом. Попри те, що ми використовуємо перевірені джерела даних, Агенція не несе
+                            відповідальності за можливі неточності або помилки («галюцинації») у відповідях бота.</li>
+                    </ul>
+
+                    <div class="ai-warning-box">
+                        <div class="ai-warning-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                </path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            Попередження
+                        </div>
+                        <p class="privacy-text" style="margin-bottom: 0;">Будь ласка, не вводьте у вікно чату з AI
+                            паролі, дані банківських карток, медичну інформацію або інші чутливі персональні дані.</p>
+                    </div>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">3. Мета збору та використання даних</h2>
+                    <p class="privacy-text">Ми використовуємо зібрану інформацію для таких цілей:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Надання послуг:</strong> Обробка заявок, підготовка комерційних пропозицій,
+                            укладання договорів.</li>
+                        <li><strong>Комунікація:</strong> Зв'язок з вами через пошту, телефон або месенджери для надання
+                            консультацій.</li>
+                        <li><strong>Покращення сервісу:</strong> Аналіз історії діалогів для навчання нашого AI та
+                            оптимізації роботи Сайту.</li>
+                        <li><strong>Маркетинг:</strong> Надсилання новин, кейсів та спеціальних пропозицій (тільки за
+                            умови надання вами окремої згоди, наприклад, через підписку).</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">4. Файли Cookies та Аналітика</h2>
+                    <p class="privacy-text">
+                        Ми використовуємо файли cookie (кукі) для забезпечення технічної роботи Сайту. Також ми можемо
+                        використовувати сторонні сервіси аналітики, зокрема Google Analytics, для збору знеособленої
+                        статистики про відвідувачів. Це допомагає нам розуміти потреби аудиторії та покращувати
+                        структуру Сайту.
+                    </p>
+                    <p class="privacy-text">Ви маєте можливість вимкнути збереження файлів cookie у налаштуваннях вашого
+                        веб-браузера в будь-який момент.</p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">5. Передача даних третім особам</h2>
+                    <p class="privacy-text">Ми зобов'язуємося не продавати та не передавати ваші персональні дані третім
+                        особам, за винятком наступних випадків:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Надання AI-послуг:</strong> Передача текстового змісту запитів до Google (Gemini
+                            API) виключно для функціонування чат-бота.</li>
+                        <li><strong>Технічні підрядники:</strong> Постачальники послуг хостингу, розсилок або
+                            CRM-систем, які діють від нашого імені та зобов'язані захищати ваші дані.</li>
+                        <li><strong>Законні вимоги:</strong> На вимогу правоохоронних органів або суду в порядку,
+                            передбаченому чинним законодавством України.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">6. Безпека даних</h2>
+                    <p class="privacy-text">
+                        Ми вживаємо належних технічних та організаційних заходів для захисту ваших персональних даних
+                        від несанкціонованого доступу, втрати, знищення або зміни. Доступ до адміністративної панелі, де
+                        зберігається історія повідомлень та контактні дані, обмежений і надається лише уповноваженим
+                        співробітникам.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">7. Ваші права</h2>
+                    <p class="privacy-text">Ви, як суб'єкт персональних даних, маєте право:</p>
+                    <ul class="privacy-list">
+                        <li>Знати про джерела збору та місцезнаходження своїх даних.</li>
+                        <li>Отримувати інформацію про умови надання доступу до персональних даних.</li>
+                        <li>Вимагати виправлення або видалення своїх даних (включаючи історію діалогів).</li>
+                        <li>Відкликати згоду на обробку даних.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block"
+                    style="background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h2 class="privacy-h2" style="margin-top: 0; border: none; font-size: 28px;">8. Контактна інформація
+                    </h2>
+                    <p class="privacy-text">
+                        Якщо у вас виникли запитання щодо цієї Політики конфіденційності, безпеки даних, або ви бажаєте
+                        видалити інформацію про себе, будь ласка, зв'яжіться з нами:
+                    </p>
+                    <p class="privacy-text">
+                        <strong>Email:</strong> <a href="mailto:example@example.com"
+                            class="contact-link">example@example.com</a><br>
+                        <strong>Вебсайт:</strong> <a href="https://example.com" class="contact-link">example.com</a>
+                    </p>
+                    <p class="privacy-text" style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+                        Ми можемо періодично оновлювати цю Політику. Актуальна версія завжди доступна на цій сторінці.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer-black">
+            <div class="footer-content-row-black">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text-black">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email-black">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title-black">Послуги</div>
+                    <a href="strategy-branding.html" class="footer-link-black">Strategy & Branding</a>
+                    <a href="design-redesign.html" class="footer-link-black">Design & ReDesign</a>
+                    <a href="performance-marketing.html" class="footer-link-black">Performance Marketing</a>
+                    <a href="ugc-virality.html" class="footer-link-black">UGC & Віральність</a>
+                    <a href="ai-automation.html" class="footer-link-black">AI & Автоматизація</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title-black">Follow Us</div>
+                    <a href="#" class="social-link-black" target="_blank"><img src="assets/icons/instagram.svg" class="social-icon-img-black"> Instagram</a>
+                    <a href="#" class="social-link-black" target="_blank"><img src="assets/icons/linkedin.svg" class="social-icon-img-black"> LinkedIn</a>
+                </div>
+
+
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text-black">© 2026 APILA. Всі права захищені.</span>
+                <a href="privacy-policy.html" class="policy-link-black">Політика Конфіденційності</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Обговоримо ваш проект?</h2>
+                    <p class="modal-subtitle">Жодних менеджерів з продажу, які читають по скрипту. Лише конкретна
+                        розмова про ваші цілі та те, як ми можемо їх досягти.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">Ім'я</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Ваше ім'я"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Прізвище</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Ваше прізвище" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Ваш номер або
+                            месенджер</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Повідомлення</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я погоджуюся з обробкою персональних даних та <a
+                                    href="privacy-policy.html" class="policy-link-modal">Політикою
+                                    конфіденційності</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Отримати
+                        консультацію</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Прийнято! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Наша команда вже отримала сигнал.
+                    Ми зв’яжемося з вами найближчим часом.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Чудово</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>Ми використовуємо cookies 🍪 для покращення вашого досвіду та аналізу трафіку.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Прийняти</button>
+            <button id="decline-cookies" class="cookie-btn decline">Відхилити</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
+

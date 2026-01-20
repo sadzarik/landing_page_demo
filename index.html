@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>APILA — Маркетингова Агенція | Стратегія, Дизайн, ШІ-Автоматизація</title>
+    <meta name="description"
+        content="APILA — Міжнародна Digital-агенція повного циклу. Розробляємо маркетингові стратегії, веб-дизайн та впроваджуємо ШІ-автоматизацію для масштабування бізнесу по всьому світу.">
+
+
+
+    
+
+    
+
+    <!-- 3. OPEN GRAPH -->
+    
+    
+    
+    <meta property="og:description"
+        content="Ми не зливаємо бюджет. Креативні стратегії та ШІ-автоматизація для малого та середнього бізнесу.">
+    
+    
+    
+
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon (Шляхи абсолютні!) -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <!-- CSS (Шляхи абсолютні: /assets/css/...) -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/responsive.min.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/tailwind_output.css">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin defer></script>
+
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="index.html" class="header-logo"> <img src="assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobile-menu">
+                <div class="mobile-nav-links">
+                    <a href="index.html" class="mobile-nav-link" onclick="toggleMenu()">ГОЛОВНА</a>
+                    <a href="about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ПРО НАС</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            ПОСЛУГИ <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <!-- ОНОВЛЕНІ ПОСИЛАННЯ -->
+                            <a href="strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="ugc-virality.html" class="mobile-sublink">UGC & Віральність</a>
+                            <a href="ai-automation.html" class="mobile-sublink ai-highlight">AI & Автоматизація</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/index.html" class="lang-option">EN</a> <!-- Оновлено на папку /en/ -->
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">ЗАЛИШИТИ ЗАЯВКУ</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="index.html" class="nav-link">ГОЛОВНА</a>
+                <a href="about-us.html" class="nav-link">ПРО НАС</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        ПОСЛУГИ
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <!-- ОНОВЛЕНІ ПОСИЛАННЯ (DESKTOP) -->
+                        <a href="strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ugc-virality.html" class="dropdown-link">UGC & Віральність <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ai-automation.html" class="dropdown-link ai-highlight">
+                            AI & Автоматизація
+                            <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/index.html" class="lang-option">EN</a> <!-- Оновлено -->
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">ЗАЛИШИТИ ЗАЯВКУ</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <main>
+        <div class="hero-section-wrapper">
+            <div class="hero-section-bg-gradient"></div>
+            <div class="hero-overlay-gradient"></div>
+
+            <div class="hero-video-outer-container">
+                <div class="hero-video-wrapper">
+                    <video class="hero-video-bg" id="hero-video" autoplay muted playsinline loop>
+                        <source src="assets/videos/hero_video.webm" type="video/webm">
+                        <source src="assets/videos/hero_video.mp4" type="video/mp4">
+                        Ваш браузер не підтримує відео тег.
+                    </video>
+                    <div class="hero-dimmer"></div>
+
+                    <div class="hero-text-content">
+                        <h1 class="hero-title">
+                            Будуємо Маркетинг, який продає.<br>
+                            Не зливаємо бюджет клієнта
+                        </h1>
+                        <p class="hero-subtitle">
+                            Поєднуємо креативні стратегії, винятковий сервіс та ШІ-автоматизація.<br>
+                            Створені для малих та середніх бізнесів, які прагнуть зростання.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="text-section-container">
+                    <h2 class="text-main-heading">
+                        Ми поєднуємо "сміливі" креативні ідеї, технології та винятковий сервіс, щоб ваш бізнес помітили.
+                    </h2>
+                    <div class="text-columns-row">
+                        <p class="text-column-p">
+                            Для нас маркетинг — це поєднання математики та мистецтва. Ми — "голодна" до результатів
+                            команда, яка не працює за шаблонами.
+                        </p>
+                        <p class="text-column-p">
+                            Ми віримо, що навіть з малим бюджетом можна "переграти" великих гравців, якщо мислити
+                            сміливо. Наша ціль — не "освоїти бюджет", а принести вам лідів.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cards-row">
+                    <div class="stats-card">
+                        <div class="card-number">7+</div>
+                        <div class="card-text">Років сукупного досвіду</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">3</div>
+                        <div class="card-text">Етапи до результату</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">10+</div>
+                        <div class="card-text">Інструментів у арсеналі</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">100%</div>
+                        <div class="card-text">Прозорості бюджету</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ARSENAL SECTION -->
+        <div class="arsenal-wrapper">
+            <div class="arsenal-header-area">
+                <div class="arsenal-top-gradient"></div>
+                <h2 class="arsenal-title">Наш арсенал для вашого зростання</h2>
+            </div>
+
+            <div class="cards-container">
+                <!-- КАРТКА 1 -->
+                <a href="strategy-branding.html" class="service-card card-yellow">
+                    <div class="card-image-box">
+                        <img src="assets/img/card_1.webp" alt="Strategy" loading="lazy"> <!-- Абсолютний шлях -->
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">01</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Дослідження ринку, Стратегія</span>
+                            <h2 class="card-title">Strategy & Branding</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Наш підхід — це фундамент. Ми починаємо з "копання",
+                                використовуючи сучасні методи для глибокого аналізу ринку.</div>
+                            <div class="card-description-col">Ми створюємо повну ДНК вашого бренду. Від аудиту до
+                                розробки "сміливої" дорожньої карти та Tone of Voice.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <!-- КАРТКА 2 -->
+                <a href="design-redesign.html" class="service-card card-lime">
+                    <div class="card-image-box">
+                        <img src="assets/img/card_2.webp" alt="Design" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">02</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Веб-дизайн, UX/UI, Ідентика</span>
+                            <h2 class="card-title">Design & ReDesign</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Дизайн — це не "гарна картинка", а інструмент, що продає.
+                                Наш підхід — "сміливий" креатив.</div>
+                            <div class="card-description-col">Створюємо повний спектр візуальних рішень. Від редизайну
+                                вашого сайту до повного бренд-буку.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <!-- КАРТКА 3 -->
+                <a href="performance-marketing.html" class="service-card card-salmon">
+                    <div class="card-image-box">
+                        <img src="assets/img/card_3.webp" alt="Marketing" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">03</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">SEO, SMM, Google Ads</span>
+                            <h2 class="card-title">Performance Marketing</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Ми не "зливаємо бюджет". Наша філософія — кожна гривня має
+                                приносити результат.</div>
+                            <div class="card-description-col">Ми приводимо вам гарячих клієнтів. Використовуємо повний
+                                арсенал: SEO, SMM та PPC.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <!-- КАРТКА 4 -->
+                <a href="ugc-virality.html" class="service-card card-peach">
+                    <div class="card-image-box">
+                        <img src="assets/img/card_4.webp" alt="UGC" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">04</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">UGC & Віральність</span>
+                            <h2 class="card-title">UGC & Віральність</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Найкраща реклама — чесна. Люди довіряють людям. Наша
+                                тактика — перетворити клієнтів на амбасадорів.</div>
+                            <div class="card-description-col">Ми розробляємо креативні кампанії та челенджі, які
+                                мотивують аудиторію створювати контент.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <!-- КАРТКА 5 -->
+                <a href="ai-automation.html" class="service-card card-ai">
+                    <div class="card-ai-bg"></div>
+                    <div class="card-image-box">
+                        <img src="assets/img/card_5.png" alt="AI" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">05</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Авто-воронки</span>
+                            <h2 class="card-title">AI & Автоматизація</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Маркетинг — це не лише креатив, але й рутина. Технології
+                                мають звільнити ваш час.</div>
+                            <div class="card-description-col">Ми автоматизуємо ваші воронки, впроваджуємо ШІ-чат-ботів
+                                та налаштовуємо аналітику.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. PROCESS SECTION -->
+        <div class="process-section">
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Дослідження</div>
+                    <div class="process-label">Перш ніж щось пропонувати, ми слухаємо вас</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="assets/icons/process_1.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Синхронізація з бізнесом</h2>
+                        <p class="process-description">Наша ціль - зрозуміти ваші "болі" та сильні сторони. Це фундамент
+                            для стратегії, яка гарантовано спрацює.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Стратегія</div>
+                    <div class="process-label">Від брендингу та креативів до автоматизованих ШІ-воронок</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="assets/icons/process_2.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Архітектура вашого зростання</h2>
+                        <p class="process-description">Ви отримуєте не просто "кампанії", а цілісну маркетингову машину.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Реалізація</div>
+                    <div class="process-label">Ми втілюємо план в життя</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="assets/icons/process_3.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Прозорість в дії</h2>
+                        <p class="process-description">Ви завжди знаєте, на що витрачається кожна гривня і яку віддачу
+                            вона приносить.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 & 6. TEAM & CHAT -->
+        <div class="team-chat-wrapper">
+            <div class="team-chat-bg-gradient"></div>
+
+            <div id="chat-root"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="home-footer-wrapper">
+        <div class="footer-bg-animated"></div>
+        <section class="cta-container">
+            <h2 class="cta-title">Готові до маркетингу,<br>який продає?</h2>
+            <p class="cta-text">Досить "зливати" бюджет на те, що не працює.<br>Давайте обговоримо ваш проект.</p>
+            <a href="#" class="cta-button open-contact-modal">ЗАЛИШИТИ ЗАЯВКУ</a>
+        </section>
+
+        <footer class="glass-footer">
+            <div class="footer-content-row">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title">Послуги</div>
+                    <a href="strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                    <a href="design-redesign.html" class="footer-link">Design & ReDesign</a>
+                    <a href="performance-marketing.html" class="footer-link">Performance Marketing</a>
+                    <a href="ugc-virality.html" class="footer-link">UGC & Віральність</a>
+                    <a href="ai-automation.html" class="footer-link">AI & Автоматизація</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title">Follow Us</div>
+                    <a href="#" class="social-link" target="_blank"><img src="assets/icons/instagram.svg" class="social-icon-img"> Instagram</a>
+                    <a href="#" class="social-link" target="_blank"><img src="assets/icons/linkedin.svg" class="social-icon-img"> LinkedIn</a>
+                </div>
+                
+                    
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text">© 2026 APILA. Всі права захищені.</span>
+                <a href="privacy-policy.html" class="policy-link">Політика Конфіденційності</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Обговоримо ваш проект?</h2>
+                    <p class="modal-subtitle">Жодних менеджерів з продажу, які читають по скрипту. Лише конкретна
+                        розмова про ваші цілі та те, як ми можемо їх досягти.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">Ім'я</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Ваше ім'я"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Прізвище</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Ваше прізвище" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Ваш номер або
+                            месенджер</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Повідомлення</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я погоджуюся з обробкою персональних даних та <a
+                                    href="privacy-policy.html" class="policy-link-modal">Політикою
+                                    конфіденційності</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Отримати
+                        консультацію</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Прийнято! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Наша команда вже отримала сигнал.
+                    Ми зв’яжемося з вами найближчим часом.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Чудово</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>Ми використовуємо cookies 🍪 для покращення вашого досвіду та аналізу трафіку.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Прийняти</button>
+            <button id="decline-cookies" class="cookie-btn decline">Відхилити</button>
+        </div>
+    </div>
+
+    <!-- Scripts (Шляхи абсолютні!) -->
+    <script src="js/main.js" defer></script>
+    <script src="js/chat.compiled.js" defer></script>
+
+</body>
+
+</html>
+
+
+

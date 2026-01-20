@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. PERSONALIZED META -->
+    <title>AI & Automation — APILA Services | Chatbots, CRM, AI Agents</title>
+    <meta name="description"
+        content="Implementation of AI agents, smart chatbots, and CRM automation. Save time and increase sales without expanding your staff.">
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <!-- CSS (Absolute paths relative to root) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="../assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header-container">
+        <div class="header-body">
+            <a href="../en/index.html" class="header-logo"> <img src="../assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+
+            <div class="mobile-menu-overlay" id="mobile-menu">
+
+                <div class="mobile-nav-links">
+                    <a href="../en/index.html" class="mobile-nav-link" onclick="toggleMenu()">HOME</a>
+                    <a href="../en/about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ABOUT US</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            SERVICES <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <a href="../en/strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="../en/design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="../en/performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="../en/ugc-virality.html" class="mobile-sublink">UGC & Virality</a>
+                            <a href="../en/ai-automation.html" class="mobile-sublink ai-highlight">AI & Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <a href="../ai-automation.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">GET IN TOUCH</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="../en/index.html" class="nav-link">HOME</a>
+                <a href="../en/about-us.html" class="nav-link">ABOUT US</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        SERVICES
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <a href="../en/strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ugc-virality.html" class="dropdown-link">UGC & Virality <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ai-automation.html" class="dropdown-link ai-highlight">AI & Automation <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <a href="../ai-automation.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">GET IN TOUCH</a>
+        </div>
+    </header>
+
+    <div class="service-page-wrapper">
+        <div class="s5-bg-animated"></div>
+
+
+        <main>
+            <div class="s5-mega-card">
+
+                <!-- 1. HERO -->
+                <div class="s5-hero">
+                    <div class="s5-badge">05</div>
+                    <div class="s5-hero-content">
+                        <div class="s5-breadcrumbs">Services / AI & Automation</div>
+                        <h1 class="s5-title">AI Solutions<br>& <strong>Automation</strong></h1>
+                        <p class="s5-description">
+                            AI Business Automation: AI Agents, Smart Chatbots, CRM Integration. Scale your business with
+                            digital employees working 24/7.
+                            From lead generation to automatic sales in CRM. We implement "digital employees" who don't
+                            get sick, don't get tired, and sell 24/7.
+                        </p>
+                    </div>
+                    <div class="s5-image-box">
+                        <img src="../assets/img/card_5.png" alt="AI Brain"> <!-- Absolute path -->
+                    </div>
+                </div>
+
+                <!-- 2. PROBLEM STRIPE -->
+                <div class="s5-problem-stripe">
+                    <div class="s5-stripe-label">Problem</div>
+                    <div class="s5-stripe-text">
+                        Do your managers spend 80% of their time on routine instead of sales? Leads go "cold" while
+                        waiting for a call? You are losing money due to human error.
+                    </div>
+                </div>
+
+                <!-- 3. SERVICES ACCORDION -->
+                <div class="s5-accordion-container" id="accordion">
+
+                    <!-- ITEM 1: AI Video (Grid Updated) -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">01</div>
+                                <div class="s5-acc-title">AI Commercial Video</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content video-layout">
+
+                                <!-- Text in two columns -->
+                                <div class="s5-content-text" style="width: 100%;">
+                                    <p class="s5-description">Short commercial videos built by artificial intelligence
+                                        for businesses and brands. Use cases: from social media posts to launching ad
+                                        campaigns.<br><br>Videos range from 5 seconds to a minute. We write the script
+                                        and storyboard, while artificial intelligence handles the visuals. It's faster
+                                        and cheaper than classic production, but no less effective.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Scriptwriting</span>
+                                        <span class="s5-tag">AI Visuals</span>
+                                        <span class="s5-tag">Ads Ready</span>
+                                    </div>
+                                </div>
+
+                                <div class="s5-video-cta">
+                                    See what we've already created 👇
+                                </div>
+
+                                <div class="s5-complex-grid">
+                                    <!-- ROW 1: 16:9 + 9:16 -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-16-9" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/BYD_Leopard_3.mp4" playsinline loop
+                                                poster="/assets/img/byd_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-9-16" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/Bagllet_Concrete.mp4" playsinline loop
+                                                poster="/assets/img/bagllet_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ROW 2: Square -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-square" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/Meama_Coffee.mp4" playsinline loop
+                                                poster="/assets/img/meama_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-square" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/Logitech.mp4" playsinline loop
+                                                poster="/assets/img/logitech_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ROW 3: 9:16 + 16:9 -->
+                                    <div class="s5-video-row">
+                                        <div class="s5-video-item item-9-16" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/Haribo_Berries.mp4" playsinline loop
+                                                poster="/assets/img/haribo_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="s5-video-item item-16-9" onclick="toggleVideo(this)">
+                                            <video src="../assets/videos/Miami_Rouge.mp4" playsinline loop
+                                                poster="/assets/img/poetry_preview.png"></video>
+                                            <div class="s5-play-btn"><svg width="20" height="20" viewBox="0 0 24 24"
+                                                    fill="white" stroke="none">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2: Lead Generation -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">02</div>
+                                <div class="s5-acc-title">Lead Generation (B2B)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Automatic lead generation. Full cycle: from category
+                                        creation to email validation. Output: 500-1000 potential leads per
+                                        launch.<br><br><strong>Classic:</strong> 10-14
+                                        hours/cycle.<br><strong>Fast:</strong> 2-4 hours/cycle (allows processing 5x
+                                        more clients).<br><br>Tariffs also include personalized cold Emails using your
+                                        documentation.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">500-1000 Leads</span>
+                                        <span class="s5-tag">Parsing</span>
+                                        <span class="s5-tag">Validation</span>
+                                        <span class="s5-tag">Cold Emailing</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_2.png" alt="Lead Gen"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3: AI Cold Calling -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">03</div>
+                                <div class="s5-acc-title">AI Cold Calling</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Your personal agent for cold calls. Upload a database of
+                                        numbers, and the AI will start calling, offering discounts, new products, or
+                                        special offers.<br><br>The agent refers only to real information from your
+                                        documentation. All calls are recorded in a table for control.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Outbound</span>
+                                        <span class="s5-tag">Real-time Voice</span>
+                                        <span class="s5-tag">Script adherence</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_3.png" alt="Cold Calling"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4: AI Incoming Calling -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">04</div>
+                                <div class="s5-acc-title">AI Calling (Incoming)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Agent for receiving incoming calls. Works as 1st line
+                                        Support or for checking order status. Never sleeps and doesn't make the customer
+                                        "hang on the line".<br><br>Relies on your knowledge base. All history is saved.
+                                    </p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Inbound</span>
+                                        <span class="s5-tag">24/7 Support</span>
+                                        <span class="s5-tag">Order Status</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_4.png" alt="Support AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5: Emails Allocation -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">05</div>
+                                <div class="s5-acc-title">Emails Allocation & Response</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Automatic email sorting. AI analyzes incoming messages,
+                                        writes personalized responses using correspondence history and order
+                                        status.<br><br>Important emails are automatically forwarded to the responsible
+                                        manager with a notification in Telegram.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Inbox Zero</span>
+                                        <span class="s5-tag">Priority Sorting</span>
+                                        <span class="s5-tag">Auto-Reply</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_5.png" alt="Email AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6: Telegram Posts -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">06</div>
+                                <div class="s5-acc-title">Telegram Posts Automation</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Automatic channel management. Creating news feeds on a
+                                        schedule or by trigger (news appearance on the web).<br><br>AI parses sources
+                                        (e.g., crypto forums or news sites), rewrites the text, generates or finds an
+                                        image, and publishes.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">News Parsing</span>
+                                        <span class="s5-tag">Auto-Posting</span>
+                                        <span class="s5-tag">Image Generation</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_6.png" alt="Telegram AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 7: LinkedIn Posts -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">07</div>
+                                <div class="s5-acc-title">LinkedIn Posts Automation</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Professional posting for your brand. AI analyzes your
+                                        documentation and creates expert content that preserves your
+                                        identity.<br><br>Possibility of generating photos or using your assets. Posting
+                                        strictly on schedule.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">B2B Content</span>
+                                        <span class="s5-tag">Brand Identity</span>
+                                        <span class="s5-tag">Scheduling</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_7.png" alt="LinkedIn AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 8: Autoresponse in CRM -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">08</div>
+                                <div class="s5-acc-title">Autoresponse in CRM</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">"Live" communication in CRM without human participation.
+                                        AI knows your scripts, products, and order statuses.<br><br>It guides the client
+                                        through the funnel to a sale, responding in 1 minute. No dry templates — full
+                                        personalization.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">CRM Integration</span>
+                                        <span class="s5-tag">Sales Funnel</span>
+                                        <span class="s5-tag">Instant Reply</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_8.png" alt="CRM AI"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 9: ChatBot on Website -->
+                    <div class="s5-acc-item">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num">09</div>
+                                <div class="s5-acc-title">Smart Website ChatBot</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Integration of smart AI directly onto your website. This
+                                        is not just an FAQ, it is a full-fledged consultant trained on your
+                                        documentation.<br><br>Gives clear answers, does not invent (no hallucinations),
+                                        closes customer questions "here and now".</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">RAG System</span>
+                                        <span class="s5-tag">Custom Knowledge Base</span>
+                                        <span class="s5-tag">24/7</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_9.png" alt="ChatBot"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 10: Sales Arena -->
+                    <div class="s5-acc-item"
+                        style="border-color: #9F7AEA; box-shadow: 0 0 20px rgba(159, 122, 234, 0.2);">
+                        <div class="s5-acc-header" onclick="toggleAcc(this)">
+                            <div class="s5-acc-title-group">
+                                <div class="s5-acc-num" style="background: #9F7AEA; color: white;">10</div>
+                                <div class="s5-acc-title" style="color: #6B46C1;">Sales Arena (Training)</div>
+                            </div>
+                            <svg class="s5-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="s5-acc-body">
+                            <div class="s5-acc-content">
+                                <div class="s5-content-text">
+                                    <p class="s5-description">Gym for the sales department. AI creates a unique "buyer"
+                                        (with character, objections, and mood) daily and starts a correspondence with
+                                        your manager.<br><br>The manager must "sell" the product to the AI. The system
+                                        evaluates skills, gives feedback, and sends a report to the manager. Constant
+                                        skill improvement without coaches.</p>
+                                    <div class="s5-tags">
+                                        <span class="s5-tag">Roleplay AI</span>
+                                        <span class="s5-tag">Staff Training</span>
+                                        <span class="s5-tag">Performance Review</span>
+                                    </div>
+                                </div>
+                                <div class="s5-content-img"><img src="../assets/img/ai_card_10.png" alt="Sales Training"
+                                        loading="lazy"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 6. CTA BOTTOM -->
+                <div class="s5-cta-section">
+                    <a href="#" class="s5-cta-btn open-contact-modal">
+                        Automate Business
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer">
+            <div class="footer-content-row">
+                <div class="footer-brand-col">
+                    <a href="../en/index.html" class="footer-logo">
+                        <img src="../assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title">Services</div>
+                    <a href="../en/strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                    <a href="../en/design-redesign.html" class="footer-link">Design & ReDesign</a>
+                    <a href="../en/performance-marketing.html" class="footer-link">Performance Marketing</a>
+                    <a href="../en/ugc-virality.html" class="footer-link">UGC & Virality</a>
+                    <a href="../en/ai-automation.html" class="footer-link">AI & Automation</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title">Follow Us</div>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/instagram.svg" class="social-icon-img"> Instagram</a>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/linkedin.svg" class="social-icon-img"> LinkedIn</a>
+                </div>
+                
+                    
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text">© 2026 APILA. All rights reserved.</span>
+                <a href="../en/privacy-policy.html" class="policy-link">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Let's discuss your project?</h2>
+                    <p class="modal-subtitle">No sales managers reading from a script. Just a concrete conversation
+                        about your goals and how we can achieve them.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">First Name</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Your name"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Last Name</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Your last name" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Your number or
+                            messenger</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Message</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree to the processing of personal data and <a
+                                    href="../en/privacy-policy.html" class="policy-link-modal">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Get a consultation</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Received! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Our team has received the signal.
+                    We will contact you shortly.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Awesome</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>We use cookies 🍪 to improve your experience and analyze traffic.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+        </div>
+    </div>
+    <script src="../js/main-en.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
+
+
+
+
+
+
+

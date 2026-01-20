@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. PERSONALIZED META -->
+    <title>Branding & Strategy — APILA Services | Positioning & Identity</title>
+    <meta name="description"
+        content="Brand strategy development, identity, and positioning. We turn chaos into a clear system that makes you stand out from competitors.">
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <!-- CSS (Absolute paths) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="../assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header-container">
+        <div class="header-body">
+            <a href="../en/index.html" class="header-logo"> <img src="../assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+
+            <div class="mobile-menu-overlay" id="mobile-menu">
+
+                <div class="mobile-nav-links">
+                    <a href="../en/index.html" class="mobile-nav-link" onclick="toggleMenu()">HOME</a>
+                    <a href="../en/about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ABOUT US</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            SERVICES <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <a href="../en/strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="../en/design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="../en/performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="../en/ugc-virality.html" class="mobile-sublink">UGC & Virality</a>
+                            <a href="../en/ai-automation.html" class="mobile-sublink ai-highlight">AI & Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <a href="../strategy-branding.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">GET IN TOUCH</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="../en/index.html" class="nav-link">HOME</a>
+                <a href="../en/about-us.html" class="nav-link">ABOUT US</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        SERVICES
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <a href="../en/strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ugc-virality.html" class="dropdown-link">UGC & Virality <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ai-automation.html" class="dropdown-link ai-highlight">AI & Automation <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <a href="../strategy-branding.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">GET IN TOUCH</a>
+        </div>
+    </header>
+
+    <div class="service-page-wrapper">
+
+        <!-- Animated background -->
+        <div class="sp-bg-animated"></div>
+
+
+        <main>
+            <div class="sp-mega-card">
+
+                <!-- 1. HERO -->
+                <div class="sp-hero">
+                    <div class="sp-badge">01</div>
+                    <div class="sp-hero-content">
+                        <div class="sp-breadcrumbs">Services / Strategy</div>
+                        <h1 class="sp-title">Brand <strong>Strategy</strong> &<br><strong>Identity</strong></h1>
+                        <p class="sp-description">
+                            Comprehensive Brand Development from positioning to visual style.
+                            If you don't know who you are — the client definitely won't know.
+                            We turn the chaos of thoughts into a clear system that sells without unnecessary words.
+                        </p>
+                    </div>
+                    <div class="sp-image-box">
+                        <!-- ASSET -->
+                        <img src="../assets/img/card_1.png" alt="Strategy Visual">
+                    </div>
+                </div>
+
+                <!-- 2. PROBLEM STATEMENT -->
+                <div class="sp-problem-stripe">
+                    <div class="sp-stripe-label">Problem</div>
+                    <div class="sp-stripe-text">
+                        "We have a cool product, but we go unnoticed" or "We blend in with competitors".
+                        Sound familiar? This is a lack of strategy.
+                    </div>
+                </div>
+
+                <!-- 3. WHAT WE DO (DETAILS) -->
+                <div class="sp-details-grid">
+
+                    <!-- Col 1 -->
+                    <div class="sp-detail-item">
+                        <svg class="sp-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <h3 class="sp-detail-title">Research &<br>Analytics</h3>
+                        <ul class="sp-detail-list">
+                            <li>Market and niche analysis</li>
+                            <li>Deep competitor analysis</li>
+                            <li>Target audience portrait (CJM)</li>
+                            <li>Finding insights</li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 2 -->
+                    <div class="sp-detail-item">
+                        <svg class="sp-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 20h.01" />
+                            <path d="M7 20v-4" />
+                            <path d="M12 20v-8" />
+                            <path d="M17 20V8" />
+                            <path d="M22 4v16" />
+                        </svg>
+                        <h3 class="sp-detail-title">Brand<br>Strategy</h3>
+                        <ul class="sp-detail-list">
+                            <li>Brand positioning</li>
+                            <li>Mission, Vision, Values</li>
+                            <li>Tone of Voice (How the brand speaks)</li>
+                            <li>Brand platform</li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3 -->
+                    <div class="sp-detail-item">
+                        <svg class="sp-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                        <h3 class="sp-detail-title">Visual<br>Identity</h3>
+                        <ul class="sp-detail-list">
+                            <li>Logo and identity</li>
+                            <li>Corporate colors and fonts</li>
+                            <li>Brandbook / Guideline</li>
+                            <li>Media design</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- 4. DELIVERABLES (RESULT) -->
+                <div class="sp-results-section">
+                    <div class="sp-results-box">
+                        <div class="sp-results-content">
+                            <h3>What do you get as a result?</h3>
+                            <p>Not just a PDF file, but a manual for taking over the market.</p>
+                            <div class="sp-results-tags">
+                                <span class="sp-tag">Brand Book.pdf</span>
+                                <span class="sp-tag">Strategy Map.pdf</span>
+                                <span class="sp-tag">Tone of Voice Guide</span>
+                                <span class="sp-tag">Competitor Analysis</span>
+                            </div>
+                        </div>
+                        <a href="#" class="sp-cta-btn open-contact-modal">
+                            Order Strategy
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer">
+            <div class="footer-content-row">
+                <div class="footer-brand-col">
+                    <a href="../en/index.html" class="footer-logo">
+                        <img src="../assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title">Services</div>
+                    <a href="../en/strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                    <a href="../en/design-redesign.html" class="footer-link">Design & ReDesign</a>
+                    <a href="../en/performance-marketing.html" class="footer-link">Performance Marketing</a>
+                    <a href="../en/ugc-virality.html" class="footer-link">UGC & Virality</a>
+                    <a href="../en/ai-automation.html" class="footer-link">AI & Automation</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title">Follow Us</div>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/instagram.svg" class="social-icon-img"> Instagram</a>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/linkedin.svg" class="social-icon-img"> LinkedIn</a>
+                </div>
+                
+                    
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text">© 2026 APILA. All rights reserved.</span>
+                <a href="../en/privacy-policy.html" class="policy-link">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Let's discuss your project?</h2>
+                    <p class="modal-subtitle">No sales managers reading from a script. Just a concrete conversation
+                        about your goals and how we can achieve them.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">First Name</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Your name"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Last Name</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Your last name" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Your number or
+                            messenger</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Message</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree to the processing of personal data and <a
+                                    href="../en/privacy-policy.html" class="policy-link-modal">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Get a consultation</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Received! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Our team has received the signal.
+                    We will contact you shortly.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Awesome</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>We use cookies 🍪 to improve your experience and analyze traffic.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+        </div>
+    </div>
+    <script src="../js/main-en.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
+
+
+
+
+
+
+

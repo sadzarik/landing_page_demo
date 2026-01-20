@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. PERSONALIZED META -->
+    <title>Про Нас — Маркетингова Агенція APILA | Команда та Філософія</title>
+    <meta name="description"
+        content="Ми — гібрид креативної студії та центру автоматизації. Дізнайтеся про нашу філософію, команду та підхід, що змінює правила гри в маркетингу.">
+
+
+
+
+
+    <!-- Open Graph -->
+
+
+
+    <meta property="og:description"
+        content="Ми — гібрид креативної студії та центру автоматизації. Дізнайтеся про нашу філософію, команду та підхід.">
+
+
+
+
+
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS (Absolute paths) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="index.html" class="header-logo"> <img src="assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobile-menu">
+                <div class="mobile-nav-links">
+                    <a href="index.html" class="mobile-nav-link" onclick="toggleMenu()">ГОЛОВНА</a>
+                    <a href="about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ПРО НАС</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            ПОСЛУГИ <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <!-- ОНОВЛЕНІ ПОСИЛАННЯ -->
+                            <a href="strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="ugc-virality.html" class="mobile-sublink">UGC & Віральність</a>
+                            <a href="ai-automation.html" class="mobile-sublink ai-highlight">AI & Автоматизація</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/about-us.html" class="lang-option">EN</a> <!-- Оновлено на папку /en/ -->
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">ЗАЛИШИТИ ЗАЯВКУ</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="index.html" class="nav-link">ГОЛОВНА</a>
+                <a href="about-us.html" class="nav-link">ПРО НАС</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        ПОСЛУГИ
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <!-- ОНОВЛЕНІ ПОСИЛАННЯ (DESKTOP) -->
+                        <a href="strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ugc-virality.html" class="dropdown-link">UGC & Віральність <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="ai-automation.html" class="dropdown-link ai-highlight">
+                            AI & Автоматизація
+                            <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <span class="lang-option active">UA</span>
+                    <span class="lang-separator">/</span>
+                    <a href="en/about-us.html" class="lang-option">EN</a> <!-- Оновлено -->
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">ЗАЛИШИТИ ЗАЯВКУ</a>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="about-page-wrapper">
+
+        <div class="about-page-wrapper">
+            <main>
+                <!-- 1. HERO: MANIFESTO -->
+                <section class="about-hero">
+                    <div class="about-hero-bg">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="assets/videos/about_us_1080.mp4" type="video/mp4"> <!-- Absolute path -->
+                        </video>
+                    </div>
+                    <div class="about-hero-content">
+                        <h1 class="about-hero-title">Емоції, що продають.<br>Технології, що працюють.</h1>
+                        <p class="about-hero-subtitle">
+                            Ми не гадаємо на кавовій гущі. Ми будуємо системи, де кожен долар бюджету працює на ваш ROI,
+                            а рутину виконують алгоритми, а не втомлені менеджери.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 2. THE DNA: WHO WE ARE -->
+                <section class="about-dna">
+                    <div class="dna-content">
+                        <h1>Ми — ваш цифровий прискорювач.</h1>
+                    </div>
+                    <div class="dna-grid">
+                        <div class="dna-image-wrapper">
+                            <img src="assets/img/about_img.png" alt="Working Process" loading="lazy">
+                            <!-- Absolute path -->
+                        </div>
+                        <div class="dna-content">
+                            <h2>Для тих, хто цінує час та інновації.</h2>
+                            <p class="dna-text">
+                                Більшість продає просто "маркетинг". Ми продаємо <span
+                                    class="highlight-text">результат</span>,
+                                помножений на сучасні технології. Поки інші пишуть звіти, наші AI-агенти вже обробляють
+                                ваші ліди.
+                            </p>
+                            <p class="dna-text">
+                                Apila — це гібрид креативної студії та центру автоматизації. Ми закриваємо повний цикл:
+                                від розробки
+                                <span class="highlight-text"> Strategy & Branding</span> до впровадження
+                                <span class="highlight-text">AI-рішень</span>, які замінюють цілі відділи.
+                            </p>
+                            <p class="dna-text">
+                                Ми інтегруємо штучний інтелект там, де він ефективніший за людину: холодні дзвінки,
+                                генерація контенту, тренування менеджерів та автоматизація лідогенерації. Це дозволяє
+                                нам бути швидшими за ринок і зберігати ваші бюджети від "зливу".
+                            </p>
+                            <p class="dna-text">
+                                Ми працюємо з малим та середнім бізнесом, який готовий вийти за рамки стандартних рішень
+                                заради кращого ROI.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. STATISTICS STRIP -->
+                <div class="stats-strip">
+                    <div class="stats-scroller">
+                        <span class="stat-item">No Bullshit Strategy </span>
+                        <span class="stat-item">ROI Focused </span>
+                        <span class="stat-item">24/7 Support </span>
+                        <span class="stat-item">Data Driven </span>
+                        <span class="stat-item">No Bullshit Strategy </span>
+                        <span class="stat-item">ROI Focused </span>
+                        <span class="stat-item">24/7 Support </span>
+                        <span class="stat-item">Data Driven </span>
+                    </div>
+                </div>
+
+                <!-- 4. PRINCIPLES -->
+                <section class="principles-section">
+                    <div class="principles-header">
+                        <h2 class="principles-title">Кодекс Apila</h2>
+                        <p class="about-hero-subtitle" style="margin: 0; text-align: left;">Три пелюстки нашої філософії
+                        </p>
+                    </div>
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <div class="p-number">01</div>
+                            <h3 class="p-title">Радикальна чесність</h3>
+                            <p class="p-desc">Ми не ховаємо відсутність результату за красивими графіками. Якщо ідея
+                                погана — ми скажемо прямо. Якщо ми помилилися — ми виправимо це за свій рахунок. Жодних
+                                прихованих комісій та "роздутих" бюджетів.</p>
+                        </div>
+                        <div class="principle-card">
+                            <div class="p-number">02</div>
+                            <h3 class="p-title">Швидкість</h3>
+                            <p class="p-desc">У сучасному світі повільні з'їдають не великих, а швидкі — повільних. Ми
+                                не змушуємо вас чекати тижнями. Завдяки AI-інструментам та автоматизації процесів, ми
+                                запускаємо, тестуємо та масштабуємо гіпотези миттєво.</p>
+                        </div>
+                        <div class="principle-card">
+                            <div class="p-number">03</div>
+                            <h3 class="p-title">Гнучкість</h3>
+                            <p class="p-desc">Ми — не громіздкий корабель, який важко розвернути. Ми адаптуємось під
+                                ваші задачі, будь то класичний Performance або складні AI-автоматизації. Ринок
+                                змінюється щодня, і ми змінюємось разом з ним, щоб ви завжди були на крок попереду.</p>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <footer class="glass-footer">
+                        <div class="footer-content-row">
+                            <div class="footer-brand-col">
+                                <a href="index.html" class="footer-logo">
+                                    <img src="assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                                    <span class="logo-text">APILA</span>
+                                </a>
+                                <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                            </div>
+                            <nav class="footer-services-col">
+                                <div class="footer-col-title">Послуги</div>
+                                <a href="strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                                <a href="design-redesign.html" class="footer-link">Design & ReDesign</a>
+                                <a href="performance-marketing.html" class="footer-link">Performance Marketing</a>
+                                <a href="ugc-virality.html" class="footer-link">UGC & Віральність</a>
+                                <a href="ai-automation.html" class="footer-link">AI & Автоматизація</a>
+                            </nav>
+                            <div class="footer-socials-col">
+                                <div class="footer-col-title">Follow Us</div>
+                                <a href="#" class="social-link" target="_blank"><img src="assets/icons/instagram.svg"
+                                        class="social-icon-img"> Instagram</a>
+                                <a href="#" class="social-link" target="_blank"><img src="assets/icons/linkedin.svg"
+                                        class="social-icon-img"> LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="footer-bottom-row">
+                            <span class="copyright-text">© 2026 APILA. Всі права захищені.</span>
+                            <a href="privacy-policy.html" class="policy-link">Політика Конфіденційності</a>
+                        </div>
+                    </footer>
+                </section>
+            </main>
+
+            <!-- 8. MODAL -->
+            <div id="contact-overlay" class="modal-overlay">
+                <div class="modal-container">
+                    <button class="modal-close-btn" onclick="closeModal()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div id="form-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Обговоримо ваш проект?</h2>
+                            <p class="modal-subtitle">Жодних менеджерів з продажу, які читають по скрипту. Лише
+                                конкретна розмова про ваші цілі та те, як ми можемо їх досягти.</p>
+                        </div>
+                        <form id="project-form" class="modal-form">
+                            <div class="form-row-split">
+                                <div class="input-group"><label for="firstName" class="input-label">Ім'я</label><input
+                                        type="text" id="firstName" name="firstName" class="modal-input"
+                                        placeholder="Ваше ім'я" required></div>
+                                <div class="input-group"><label for="lastName"
+                                        class="input-label">Прізвище</label><input type="text" id="lastName"
+                                        name="lastName" class="modal-input" placeholder="Ваше прізвище" required></div>
+                            </div>
+                            <div class="input-group"><label for="contactMethod" class="input-label">Ваш номер або
+                                    месенджер</label><input type="text" id="contactMethod" name="contactMethod"
+                                    class="modal-input" placeholder="+380..." required></div>
+                            <div class="input-group"><label for="email" class="input-label">Email</label><input
+                                    type="email" id="email" name="email" class="modal-input"
+                                    placeholder="user@gmail.com" required></div>
+                            <div class="input-group"><label for="message"
+                                    class="input-label">Повідомлення</label><textarea id="message" name="message"
+                                    class="modal-input textarea-input" placeholder="..."></textarea></div>
+                            <div class="checkbox-wrapper">
+                                <label class="custom-checkbox-container">
+                                    <input type="checkbox" id="privacy-policy-check">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Я погоджуюся з обробкою персональних даних та <a
+                                            href="privacy-policy.html" class="policy-link-modal">Політикою
+                                            конфіденційності</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Отримати
+                                консультацію</button>
+                        </form>
+                    </div>
+                    <div id="success-message" class="success-state" style="display: none;">
+                        <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                                stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg></div>
+                        <h2 class="modal-title" style="text-align: center;">Прийнято! 🚀</h2>
+                        <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Наша команда вже отримала
+                            сигнал. Ми зв’яжемося з вами найближчим часом.</p>
+                        <button class="modal-submit-btn" onclick="closeModal()"
+                            style="margin-top: 40px; width: 200px;">Чудово</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COOKIE BANNER -->
+            <div id="cookie-banner" class="cookie-banner">
+                <div class="cookie-text">
+                    <p>Ми використовуємо cookies 🍪 для покращення вашого досвіду та аналізу трафіку.</p>
+                </div>
+                <div class="cookie-buttons">
+                    <button id="accept-cookies" class="cookie-btn accept">Прийняти</button>
+                    <button id="decline-cookies" class="cookie-btn decline">Відхилити</button>
+                </div>
+            </div>
+            <script src="js/main.js"></script>
+            <script> lucide.createIcons(); </script>
+</body>
+
+</html>

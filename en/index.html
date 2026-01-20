@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>APILA — Marketing Agency | Strategy, Design, AI Automation</title>
+
+    
+
+
+
+    
+
+    <!-- SEO Basic -->
+    <meta name="description"
+        content="APILA Marketing Agency. We combine creative strategies, exceptional service, and AI automation to grow your business.">
+    <meta name="keywords" content="marketing, branding, advertising, AI, automation, strategy, Apila, digital agency">
+    <meta name="author" content="APILA Agency">
+
+    
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <!-- CSS (Absolute paths) -->
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/responsive.min.css">
+
+    <link rel="stylesheet" href="../css/tailwind_output.css">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin defer></script>
+
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="../assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="../en/index.html" class="header-logo"> <img src="../assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+
+            <div class="mobile-menu-overlay" id="mobile-menu">
+
+                <div class="mobile-nav-links">
+                    <a href="../en/index.html" class="mobile-nav-link" onclick="toggleMenu()">HOME</a>
+                    <a href="../en/about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ABOUT US</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            SERVICES <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <a href="../en/strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="../en/design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="../en/performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="../en/ugc-virality.html" class="mobile-sublink">UGC & Virality</a>
+                            <a href="../en/ai-automation.html" class="mobile-sublink ai-highlight">AI & Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <a href="../index.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">GET IN TOUCH</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="../en/index.html" class="nav-link">HOME</a>
+                <a href="../en/about-us.html" class="nav-link">ABOUT US</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        SERVICES
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <a href="../en/strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ugc-virality.html" class="dropdown-link">UGC & Virality <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ai-automation.html" class="dropdown-link ai-highlight">AI & Automation <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <a href="../index.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">GET IN TOUCH</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <main>
+        <div class="hero-section-wrapper">
+            <div class="hero-section-bg-gradient"></div>
+            <div class="hero-overlay-gradient"></div>
+
+            <div class="hero-video-outer-container">
+                <div class="hero-video-wrapper">
+                    <video class="hero-video-bg" id="hero-video" autoplay muted playsinline loop>
+                        <source src="../assets/videos/hero_video.webm" type="video/webm">
+                        <source src="../assets/videos/hero_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-dimmer"></div>
+
+                    <div class="hero-text-content">
+                        <h1 class="hero-title">
+                            Building Marketing That Sells.<br>
+                            Without Draining Your Budget
+                        </h1>
+                        <p class="hero-subtitle">
+                            Combining creative strategies, exceptional service, and AI automation.<br>
+                            Built for small and medium businesses aiming for growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="text-section-container">
+                    <h2 class="text-main-heading">
+                        We combine "bold" creative ideas, technology, and exceptional service to get your business
+                        noticed.
+                    </h2>
+                    <div class="text-columns-row">
+                        <p class="text-column-p">
+                            For us, marketing is a blend of mathematics and art. We are a team "hungry" for results that
+                            doesn't work by templates.
+                        </p>
+                        <p class="text-column-p">
+                            We believe that even with a small budget, you can "outplay" big players if you think boldly.
+                            Our goal is not to "spend the budget", but to bring you leads.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cards-row">
+                    <div class="stats-card">
+                        <div class="card-number">7+</div>
+                        <div class="card-text">Years of cumulative experience</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">3</div>
+                        <div class="card-text">Steps to result</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">10+</div>
+                        <div class="card-text">Tools in the arsenal</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="card-number">100%</div>
+                        <div class="card-text">Budget transparency</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ARSENAL SECTION -->
+        <div class="arsenal-wrapper">
+            <div class="arsenal-header-area">
+                <div class="arsenal-top-gradient"></div>
+                <h2 class="arsenal-title">Our arsenal for your growth</h2>
+            </div>
+
+            <div class="cards-container">
+                <a href="../en/strategy-branding.html" class="service-card card-yellow">
+                    <div class="card-image-box">
+                        <img src="../assets/img/card_1.webp" alt="Strategy" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">01</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Market Research, Strategy</span>
+                            <h2 class="card-title">Strategy & Branding</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Our approach is the foundation. We start by "digging",
+                                using modern methods for deep market analysis.</div>
+                            <div class="card-description-col">We create the complete DNA of your brand. From audit to
+                                developing a "bold" roadmap and Tone of Voice.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <a href="../en/design-redesign.html" class="service-card card-lime">
+                    <div class="card-image-box">
+                        <img src="../assets/img/card_2.webp" alt="Design" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">02</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Web Design, UX/UI, Identity</span>
+                            <h2 class="card-title">Design & ReDesign</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Design is not just a "pretty picture", but a selling tool.
+                                Our approach is "bold" creativity.</div>
+                            <div class="card-description-col">We create a full spectrum of visual solutions. From
+                                redesigning your site to a complete brand book.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <a href="../en/performance-marketing.html" class="service-card card-salmon">
+                    <div class="card-image-box">
+                        <img src="../assets/img/card_3.webp" alt="Marketing" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">03</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">SEO, SMM, Google Ads</span>
+                            <h2 class="card-title">Performance Marketing</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">We don't "drain the budget". Our philosophy is that every
+                                dollar must yield results.</div>
+                            <div class="card-description-col">We bring you hot leads. We use the full arsenal: SEO, SMM,
+                                and PPC.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <a href="../en/ugc-virality.html" class="service-card card-peach">
+                    <div class="card-image-box">
+                        <img src="../assets/img/card_4.webp" alt="UGC" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">04</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">UGC & Virality</span>
+                            <h2 class="card-title">UGC & Virality</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">The best advertising is honest. People trust people. Our
+                                tactic is to turn customers into ambassadors.</div>
+                            <div class="card-description-col">We develop creative campaigns and challenges that motivate
+                                the audience to create content.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+                <a href="../en/ai-automation.html" class="service-card card-ai">
+                    <div class="card-ai-bg"></div>
+                    <div class="card-image-box">
+                        <img src="../assets/img/card_5.png" alt="AI" loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-number-badge">05</div>
+                        <div class="card-text-wrapper">
+                            <span class="card-subtitle">Auto-funnels</span>
+                            <h2 class="card-title">AI & Automation</h2>
+                        </div>
+                        <div class="card-description-row">
+                            <div class="card-description-col">Marketing is not just creativity, but also routine.
+                                Technologies should free up your time.</div>
+                            <div class="card-description-col">We automate your funnels, implement AI chatbots, and set
+                                up analytics.</div>
+                        </div>
+                        <div class="card-arrow-hint"><svg class="card-arrow-svg" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. PROCESS SECTION -->
+        <div class="process-section">
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Research</div>
+                    <div class="process-label">Before proposing anything, we listen to you</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="../assets/icons/process_1.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Business Synchronization</h2>
+                        <p class="process-description">Our goal is to understand your "pain points" and strengths. This
+                            is the foundation for a strategy that is guaranteed to work.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Strategy</div>
+                    <div class="process-label">From branding and creatives to automated AI funnels</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="../assets/icons/process_2.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Architecture of your growth</h2>
+                        <p class="process-description">You get not just "campaigns", but a holistic marketing machine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-row">
+                <div class="process-header">
+                    <div class="process-label">Implementation</div>
+                    <div class="process-label">We bring the plan to life</div>
+                </div>
+                <div class="process-body">
+                    <div class="process-icon"><img src="../assets/icons/process_3.svg" alt=""
+                            onerror="this.closest('.process-icon').style.display='none'" loading="lazy"></div>
+                    <div class="process-text-col">
+                        <h2 class="process-title">Transparency in action</h2>
+                        <p class="process-description">You always know what every dollar is spent on and what return it
+                            brings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 & 6. TEAM & CHAT -->
+        <div class="team-chat-wrapper">
+            <div class="team-chat-bg-gradient"></div>
+
+            <div id="chat-root"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <div class="home-footer-wrapper">
+        <div class="footer-bg-animated"></div>
+        <section class="cta-container">
+            <h2 class="cta-title">Ready for marketing<br>that sells?</h2>
+            <p class="cta-text">Stop "draining" budget on what doesn't work.<br>Let's discuss your project.</p>
+            <a href="#" class="cta-button open-contact-modal">GET IN TOUCH</a>
+        </section>
+
+        <footer class="glass-footer">
+            <div class="footer-content-row">
+                <div class="footer-brand-col">
+                    <a href="../en/index.html" class="footer-logo">
+                        <img src="../assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title">Services</div>
+                    <a href="../en/strategy-branding.html" class="footer-link">Strategy & Branding</a>
+                    <a href="../en/design-redesign.html" class="footer-link">Design & ReDesign</a>
+                    <a href="../en/performance-marketing.html" class="footer-link">Performance Marketing</a>
+                    <a href="../en/ugc-virality.html" class="footer-link">UGC & Virality</a>
+                    <a href="../en/ai-automation.html" class="footer-link">AI & Automation</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title">Follow Us</div>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/instagram.svg" class="social-icon-img"> Instagram</a>
+                    <a href="#" class="social-link" target="_blank"><img src="../assets/icons/linkedin.svg" class="social-icon-img"> LinkedIn</a>
+                </div>
+                
+                    
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text">© 2026 APILA. All rights reserved.</span>
+                <a href="../en/privacy-policy.html" class="policy-link">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Let's discuss your project?</h2>
+                    <p class="modal-subtitle">No sales managers reading from a script. Just a concrete conversation
+                        about your goals and how we can achieve them.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">First Name</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Your name"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Last Name</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Your last name" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Your number or
+                            messenger</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Message</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree to the processing of personal data and <a
+                                    href="../en/privacy-policy.html" class="policy-link-modal">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Get a consultation</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Received! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Our team has received the signal.
+                    We will contact you shortly.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Awesome</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>We use cookies 🍪 to improve your experience and analyze traffic.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+        </div>
+    </div>
+    <script src="../js/main-en.js" defer></script>
+    <script src="../js/chat-en.compiled.js" defer></script>
+
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy — APILA Agency | Data Protection & Security</title>
+    <meta name="description"
+        content="Privacy Policy of APILA Marketing Agency. Learn how we collect, use, and protect your personal data.">
+
+
+
+
+
+    <!-- Open Graph -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Favicon (Absolute paths) -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Apila" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS (Absolute paths) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="page-preloader" class="preloader">
+        <div class="loader-content">
+            <!-- Використовуємо твоє лого -->
+            <img src="../assets/icons/logo.svg" alt="Apila" class="loader-logo">
+            <!-- Спінер знизу -->
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-body">
+            <a href="../en/index.html" class="header-logo"> <img src="../assets/icons/logo.svg" alt="Apila"
+                    class="header-logo-img"></a>
+
+            <button class="burger-btn" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobile-menu">
+                <div class="mobile-nav-links">
+                    <a href="../en/index.html" class="mobile-nav-link" onclick="toggleMenu()">HOME</a>
+                    <a href="../en/about-us.html" class="mobile-nav-link" onclick="toggleMenu()">ABOUT US</a>
+                    <div class="mobile-dropdown-wrapper">
+                        <div class="mobile-nav-link services-toggle" onclick="toggleMobileServices()">
+                            SERVICES <span class="arrow-icon">▼</span>
+                        </div>
+                        <div class="mobile-submenu" id="mobile-services-list">
+                            <!-- UPDATED LINKS -->
+                            <a href="../en/strategy-branding.html" class="mobile-sublink">Strategy & Branding</a>
+                            <a href="../en/design-redesign.html" class="mobile-sublink">Design & ReDesign</a>
+                            <a href="../en/performance-marketing.html" class="mobile-sublink">Performance Marketing</a>
+                            <a href="../en/ugc-virality.html" class="mobile-sublink">UGC & Virality</a>
+                            <a href="../en/ai-automation.html" class="mobile-sublink ai-highlight">AI & Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lang-switcher" style="margin-bottom: 30px; transform: scale(1.2);">
+                    <a href="../privacy-policy.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+
+                <a href="#" class="header-cta open-contact-modal" onclick="toggleMenu()"
+                    style="display: flex; width: auto; min-width: 200px;">GET IN TOUCH</a>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="../en/index.html" class="nav-link">HOME</a>
+                <a href="../en/about-us.html" class="nav-link">ABOUT US</a>
+
+                <div class="nav-item-dropdown-wrapper">
+                    <span class="nav-link" style="pointer-events: none;">
+                        SERVICES
+                        <svg class="nav-arrow-main" viewBox="0 0 24 24">
+                            <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="services-dropdown">
+                        <!-- UPDATED LINKS (DESKTOP) -->
+                        <a href="../en/strategy-branding.html" class="dropdown-link">Strategy & Branding <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/design-redesign.html" class="dropdown-link">Design & ReDesign <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/performance-marketing.html" class="dropdown-link">Performance Marketing <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ugc-virality.html" class="dropdown-link">UGC & Virality <svg
+                                class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                        <a href="../en/ai-automation.html" class="dropdown-link ai-highlight">
+                            AI & Automation
+                            <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lang-switcher">
+                    <a href="../privacy-policy.html" class="lang-option">UA</a>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active">EN</span>
+                </div>
+            </nav>
+
+            <a href="#" class="header-cta open-contact-modal desktop-nav">GET IN TOUCH</a>
+        </div>
+    </header>
+
+    <div class="privacy-page-wrapper">
+
+        <!-- HEADER -->
+        <main>
+            <div class="privacy-header">
+                <h1 class="privacy-title">Privacy Policy</h1>
+                <p class="privacy-date">Last updated: 01.12.2025</p>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="privacy-container">
+
+                <div class="privacy-block">
+                    <p class="privacy-text">
+                        This Privacy Policy (hereinafter referred to as the "Policy") governs the procedure for
+                        collecting, using, storing, and protecting the personal data of users of the apila.space website
+                        (hereinafter referred to as the "Site").
+                    </p>
+                    <p class="privacy-text">
+                        The owner of the Site and the controller of personal data is Sole Proprietor Chirkinian Yurii
+                        Artemovych (hereinafter referred to as "We", "Agency" or "Administration"). We respect your
+                        privacy and act in accordance with the Law of Ukraine "On Personal Data Protection" and
+                        generally accepted European data protection standards.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">1. What data we collect</h2>
+                    <p class="privacy-text">We collect information necessary for us to provide services, communicate,
+                        and improve the operation of our Site.</p>
+
+                    <h3 class="privacy-h3">1.1. Personal data you provide knowingly</h3>
+                    <p class="privacy-text">When filling out forms, communicating with managers, or using the AI chat,
+                        we may receive:</p>
+                    <ul class="privacy-list">
+                        <li>First Name and Last Name;</li>
+                        <li>Phone number;</li>
+                        <li>Email address;</li>
+                        <li>Username in messengers (Telegram, WhatsApp, etc.);</li>
+                        <li>Content of your messages, requests, and comments.</li>
+                    </ul>
+
+                    <h3 class="privacy-h3">1.2. Technical data (automatic collection)</h3>
+                    <p class="privacy-text">When you visit the Site, we may automatically collect technical information:
+                    </p>
+                    <ul class="privacy-list">
+                        <li>IP address and device type;</li>
+                        <li>Browser type and operating system;</li>
+                        <li>Data about your interaction with the Site (pages viewed, time spent) via cookies and
+                            analytical services.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">2. Use of AI Assistant and Webhook</h2>
+                    <p class="privacy-text">Our Site integrates a smart chatbot function for instant answers to
+                        questions. This function uses Webhook for data exchange and the Google Gemini model API.</p>
+
+                    <p class="privacy-text"><strong>Important information about data processing in the chat:</strong>
+                    </p>
+                    <ul class="privacy-list">
+                        <li><strong>Data Transfer:</strong> The text of your question is transmitted via a secure
+                            connection to Google LLC servers to generate a response. Google processes data in accordance
+                            with its privacy policy.</li>
+                        <li><strong>History Storage:</strong> We store the history of your dialogues with the AI in our
+                            own database.</li>
+                        <li><strong>Purpose:</strong> We analyze requests to improve the accuracy of our knowledge base
+                            (RAG system) and the quality of customer service.</li>
+                        <li><strong>Disclaimer:</strong> Responses are generated automatically by artificial
+                            intelligence. Although we use verified data sources, the Agency is not responsible for
+                            possible inaccuracies or errors ("hallucinations") in the bot's responses.</li>
+                    </ul>
+
+                    <div class="ai-warning-box">
+                        <div class="ai-warning-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                </path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            Warning
+                        </div>
+                        <p class="privacy-text" style="margin-bottom: 0;">Please do not enter passwords, bank card
+                            details, medical information, or other sensitive personal data into the AI chat window.</p>
+                    </div>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">3. Purpose of collection and use of data</h2>
+                    <p class="privacy-text">We use the collected information for the following purposes:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Service Provision:</strong> Processing requests, preparing commercial proposals,
+                            concluding contracts.</li>
+                        <li><strong>Communication:</strong> Contacting you via email, phone, or messengers to provide
+                            consultations.</li>
+                        <li><strong>Service Improvement:</strong> Analyzing dialogue history to train our AI and
+                            optimize Site operation.</li>
+                        <li><strong>Marketing:</strong> Sending news, cases, and special offers (only provided you have
+                            given separate consent, for example, by subscribing).</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">4. Cookies and Analytics</h2>
+                    <p class="privacy-text">
+                        We use cookies to ensure the technical operation of the Site. We may also use third-party
+                        analytics services, in particular Google Analytics, to collect depersonalized statistics about
+                        visitors. This helps us understand audience needs and improve the Site structure.
+                    </p>
+                    <p class="privacy-text">You have the option to disable cookies in your web browser settings at any
+                        time.</p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">5. Data transfer to third parties</h2>
+                    <p class="privacy-text">We undertake not to sell or transfer your personal data to third parties,
+                        except in the following cases:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Providing AI Services:</strong> Transferring text content of requests to Google
+                            (Gemini API) exclusively for the chatbot functioning.</li>
+                        <li><strong>Technical Contractors:</strong> Hosting, mailing, or CRM system providers who act on
+                            our behalf and are obligated to protect your data.</li>
+                        <li><strong>Legal Requirements:</strong> At the request of law enforcement agencies or a court
+                            in the manner prescribed by the current legislation of Ukraine.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">6. Data Security</h2>
+                    <p class="privacy-text">
+                        We take appropriate technical and organizational measures to protect your personal data from
+                        unauthorized access, loss, destruction, or alteration. Access to the administrative panel, where
+                        message history and contact details are stored, is limited and granted only to authorized
+                        employees.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 class="privacy-h2">7. Your Rights</h2>
+                    <p class="privacy-text">As a subject of personal data, you have the right to:</p>
+                    <ul class="privacy-list">
+                        <li>Know about the sources of collection and location of your data.</li>
+                        <li>Receive information about the conditions for granting access to personal data.</li>
+                        <li>Request correction or deletion of your data (including dialogue history).</li>
+                        <li>Withdraw consent to data processing.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block"
+                    style="background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h2 class="privacy-h2" style="margin-top: 0; border: none; font-size: 28px;">8. Contact Information
+                    </h2>
+                    <p class="privacy-text">
+                        If you have any questions regarding this Privacy Policy, data security, or wish to delete
+                        information about yourself, please contact us:
+                    </p>
+                    <p class="privacy-text">
+                        <strong>Email:</strong> <a href="mailto:example@example.com"
+                            class="contact-link">example@example.com</a><br>
+                        <strong>Website:</strong> <a href="https://example.com" class="contact-link">example.com</a>
+                    </p>
+                    <p class="privacy-text" style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+                        We may periodically update this Policy. The current version is always available on this page.
+                    </p>
+                </div>
+
+
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="glass-footer-black">
+            <div class="footer-content-row-black">
+                <div class="footer-brand-col">
+                    <a href="../en/index.html" class="footer-logo">
+                        <img src="../assets/icons/logo.svg" alt="APILA Logo" class="logo-img">
+                        <span class="logo-text-black">APILA</span>
+                    </a>
+                    <a href="mailto:example@example.com" class="footer-email-black">example@example.com</a>
+                </div>
+                <nav class="footer-services-col">
+                    <div class="footer-col-title-black">Services</div>
+                    <a href="../en/strategy-branding.html" class="footer-link-black">Strategy & Branding</a>
+                    <a href="../en/design-redesign.html" class="footer-link-black">Design & ReDesign</a>
+                    <a href="../en/performance-marketing.html" class="footer-link-black">Performance Marketing</a>
+                    <a href="../en/ugc-virality.html" class="footer-link-black">UGC & Virality</a>
+                    <a href="../en/ai-automation.html" class="footer-link-black">AI & Automation</a>
+                </nav>
+                <div class="footer-socials-col">
+                    <div class="footer-col-title-black">Follow Us</div>
+                    <a href="#" class="social-link-black" target="_blank"><img src="../assets/icons/instagram.svg"
+                            class="social-icon-img-black"> Instagram</a>
+                    <a href="#" class="social-link-black" target="_blank"><img src="../assets/icons/linkedin.svg"
+                            class="social-icon-img-black"> LinkedIn</a>
+                </div>
+
+
+            </div>
+            <div class="footer-bottom-row">
+                <span class="copyright-text-black">© 2026 APILA. All rights reserved.</span>
+                <a href="../en/privacy-policy.html" class="policy-link-black">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- 8. MODAL -->
+    <div id="contact-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="form-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Let's discuss your project?</h2>
+                    <p class="modal-subtitle">No sales managers reading from a script. Just a concrete conversation
+                        about your goals and how we can achieve them.</p>
+                </div>
+                <form id="project-form" class="modal-form">
+                    <div class="form-row-split">
+                        <div class="input-group"><label for="firstName" class="input-label">First Name</label><input
+                                type="text" id="firstName" name="firstName" class="modal-input" placeholder="Your name"
+                                required></div>
+                        <div class="input-group"><label for="lastName" class="input-label">Last Name</label><input
+                                type="text" id="lastName" name="lastName" class="modal-input"
+                                placeholder="Your last name" required></div>
+                    </div>
+                    <div class="input-group"><label for="contactMethod" class="input-label">Your number or
+                            messenger</label><input type="text" id="contactMethod" name="contactMethod"
+                            class="modal-input" placeholder="+380..." required></div>
+                    <div class="input-group"><label for="email" class="input-label">Email</label><input type="email"
+                            id="email" name="email" class="modal-input" placeholder="user@gmail.com" required></div>
+                    <div class="input-group"><label for="message" class="input-label">Message</label><textarea
+                            id="message" name="message" class="modal-input textarea-input" placeholder="..."></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="privacy-policy-check">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree to the processing of personal data and <a
+                                    href="../en/privacy-policy.html" class="policy-link-modal">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submit-btn" class="modal-submit-btn" disabled>Get a consultation</button>
+                </form>
+            </div>
+            <div id="success-message" class="success-state" style="display: none;">
+                <div class="success-icon-circle"><svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></div>
+                <h2 class="modal-title" style="text-align: center;">Received! 🚀</h2>
+                <p class="modal-subtitle" style="text-align: center; font-size: 24px;">Our team has received the signal.
+                    We will contact you shortly.</p>
+                <button class="modal-submit-btn" onclick="closeModal()"
+                    style="margin-top: 40px; width: 200px;">Awesome</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <p>We use cookies 🍪 to improve your experience and analyze traffic.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+        </div>
+    </div>
+
+    <script src="../js/main-en.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
